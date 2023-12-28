@@ -15,4 +15,13 @@ class HomeController extends Controller
     {
         return view('frontEnd.blog');
     }
+
+    public function shopCategory()
+    {
+        return view('frontEnd.category');
+    }
+    public function singleProduct()
+    {
+        return view('frontEnd.single-product');
+    }
 }
