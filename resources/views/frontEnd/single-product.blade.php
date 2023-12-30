@@ -7,9 +7,9 @@
                 <div class="col-first">
                     <h1>Product Details Page</h1>
                     <nav class="d-flex align-items-center">
-                        <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="single-product.html">product-details</a>
+                        <a href="{{ route('home') }}">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="{{ route('shop.category') }}">Shop<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="{{ route('shop.single') }}">product-details</a>
                     </nav>
                 </div>
             </div>
