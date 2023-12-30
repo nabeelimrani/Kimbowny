@@ -24,4 +24,16 @@ class HomeController extends Controller
     {
         return view('frontEnd.single-product');
     }
+    public function cart()
+    {
+        return view('frontEnd.cart');
+    }
+    public function conformation()
+    {
+        return view('frontEnd.confirmation');
+    }
+    public function contact()
+    {
+        return view('frontEnd.contact');
+    }
 }

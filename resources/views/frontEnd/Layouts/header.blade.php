@@ -63,8 +63,10 @@
                                             Details</a></li>
                                     <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('shop.cart') }}">Shopping
+                                            Cart</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="{{ route('conformation') }}">Confirmation</a>
                                     </li>
                                 </ul>
                             </li>
@@ -87,7 +89,7 @@
                                     <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a>
