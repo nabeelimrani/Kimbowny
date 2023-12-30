@@ -61,7 +61,8 @@
                                             Category</a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('shop.single') }}">Product
                                             Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('checkout') }}">Product
+                                            Checkout</a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('shop.cart') }}">Shopping
                                             Cart</a></li>
@@ -76,7 +77,8 @@
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a class="nav-link" href="{{ route('blog.view') }}">Blog</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('singleblog') }}">Blog
+                                            Details</a>
                                     </li>
                                 </ul>
                             </li>
@@ -84,9 +86,12 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
                                     role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="{{ route('tracking') }}">Tracking</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="{{ route('element') }}">Elements</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>

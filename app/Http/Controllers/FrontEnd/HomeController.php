@@ -36,4 +36,25 @@ class HomeController extends Controller
     {
         return view('frontEnd.contact');
     }
+    public function checkout()
+    {
+        return view('frontEnd.checkout');
+    }
+    public function singleblog()
+    {
+        return view('frontEnd.single-blog');
+    }
+    public function login()
+    {
+        return view('frontEnd.login');
+    }
+    public function tracking()
+    {
+        return view('frontEnd.tracking');
+    }
+    public function element()
+    {
+        return view('frontEnd.elements');
+    }
+
 }
