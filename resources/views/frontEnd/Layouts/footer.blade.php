@@ -98,13 +98,14 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="quick-view-carousel">
-                            <div class="item" style="background: url(img/organic-food/q1.jpg);">
+                            <div class="item"
+                                style="background: url({{ asset('frontEnd/img/organic-food/q1.jpg') }};">
 
                             </div>
-                            <div class="item" style="background: url(img/organic-food/q1.jpg);">
+                            <div class="item" style="background:  url({{ asset('frontEnd/img/organic-food/q1.jpg') }};">
 
                             </div>
-                            <div class="item" style="background: url(img/organic-food/q1.jpg);">
+                            <div class="item" style="background:  url({{ asset('frontEnd/img/organic-food/q1.jpg') }};">
 
                             </div>
                         </div>
