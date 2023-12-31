@@ -16,3 +16,7 @@ Route::group(['controller' => HomeController::class], function () {
     Route::get('/tracking', 'tracking')->name('tracking');
     Route::get('/element', 'element')->name('element');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
