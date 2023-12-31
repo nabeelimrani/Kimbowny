@@ -7,7 +7,7 @@
                 <div class="col-first">
                     <h1>Confirmation</h1>
                     <nav class="d-flex align-items-center">
-                        <a href="{{ route('home') }}">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="{{ route('home') }}">Home bb<span class="lnr lnr-arrow-right"></span></a>
                         <a href="{{ route('conformation') }}">Confirmation</a>
                     </nav>
                 </div>
