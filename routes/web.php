@@ -12,11 +12,14 @@ Route::group(['controller' => HomeController::class], function () {
     Route::get('/contact', 'contact')->name('contact');
     Route::get('/checkout', 'checkout')->name('checkout');
     Route::get('/singleblog', 'singleblog')->name('singleblog');
-    Route::get('/login', 'login')->name('login');
     Route::get('/tracking', 'tracking')->name('tracking');
     Route::get('/element', 'element')->name('element');
 });
 
-Auth::routes();
-
+Auth::routes(["register"=>false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/login', [App\Http\Controllers\AuthController::class, 'loginPage'])->name("login");
+Route::get('/register/{slug?}', [App\Http\Controllers\AuthController::class, 'registerPage'])->name("register");
+Route::post('/register', [App\Http\Controllers\AuthController::class, 'registerUser'])->name("register");
+
+
