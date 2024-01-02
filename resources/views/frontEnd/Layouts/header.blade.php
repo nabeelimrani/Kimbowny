@@ -86,8 +86,13 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
                                     role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a>
-                                    </li>
+                                    @if (!auth()->check())
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="{{ route('login') }}">Login</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="{{ route('register') }}">Register</a></li>
+                                    @endif
+
                                     <li class="nav-item"><a class="nav-link"
                                             href="{{ route('tracking') }}">Tracking</a></li>
                                     <li class="nav-item"><a class="nav-link"
@@ -95,6 +100,36 @@
                                 </ul>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
+                            @if (auth()->check())
+                                <!-- User is authenticated, show username and logout button -->
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                        role="button" aria-haspopup="true"
+                                        aria-expanded="false">{{ auth()->user()->firstname }}
+                                        {{ auth()->user()->lastname }}</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="">
+                                                My Profile
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                          document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                class="d-none">
+                                                @csrf
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            @endif
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a>
