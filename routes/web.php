@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BackEnd\MainController;
 use App\Http\Controllers\FrontEnd\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,13 @@ Route::group(['controller' => HomeController::class], function () {
     Route::get('/singleblog', 'singleblog')->name('singleblog');
     Route::get('/tracking', 'tracking')->name('tracking');
     Route::get('/element', 'element')->name('element');
+
+});
+Route::group(['controller' => MainController::class], function () {
+    Route::get('/admin/home', 'index')->name('home');
+    Route::get('/admin/login', 'login')->name('admin.login');
+    Route::get('/admin/register', 'register')->name('admin.register');
+    Route::get('/admin/forgot', 'forgot')->name('admin.forgot');
 
 });
 
