@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-
     public function loginPage()
     {
         return view('frontEnd.login');
@@ -33,7 +32,6 @@ class AuthController extends Controller
             if (!$check) {
                 return redirect()->back()->with('error', 'Your Invitation code is incorrect. Please recheck the Invitation link.');
             }
-
         }
 
         $user = User::create([
