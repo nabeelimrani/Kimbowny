@@ -102,10 +102,12 @@
                                 style="background: url({{ asset('frontEnd/img/organic-food/q1.jpg') }};">
 
                             </div>
-                            <div class="item" style="background:  url({{ asset('frontEnd/img/organic-food/q1.jpg') }};">
+                            <div class="item"
+                                style="background:  url({{ asset('frontEnd/img/organic-food/q1.jpg') }};">
 
                             </div>
-                            <div class="item" style="background:  url({{ asset('frontEnd/img/organic-food/q1.jpg') }};">
+                            <div class="item"
+                                style="background:  url({{ asset('frontEnd/img/organic-food/q1.jpg') }};">
 
                             </div>
                         </div>
@@ -206,6 +208,16 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 <script src="{{ asset('frontEnd/js/gmaps.min.js') }}"></script>
 <script src="{{ asset('frontEnd/js/main.js') }}"></script>
+<script>
+    document.onreadystatechange = function() {
+        var state = document.readyState;
+        if (state == 'complete') {
+            // Page is fully loaded, hide the preloader
+            document.querySelector('.preloader-wrap').style.display = 'none';
+        }
+    }
+</script>
+
 </body>
 
 </html>

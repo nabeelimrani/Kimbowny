@@ -19,7 +19,7 @@ Route::group(['controller' => HomeController::class], function () {
 
 });
 Route::group(['controller' => MainController::class], function () {
-    Route::get('/admin/home', 'index')->name('home');
+    Route::get('/admin/home', 'index')->name('adminhome');
     Route::get('/admin/login', 'login')->name('admin.login');
     Route::get('/admin/register', 'register')->name('admin.register');
     Route::get('/admin/forgot', 'forgot')->name('admin.forgot');
@@ -27,8 +27,6 @@ Route::group(['controller' => MainController::class], function () {
 });
 
 Auth::routes(["register" => false]);
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth'])->name('home');
 
 Route::get('/register/{slug?}', [App\Http\Controllers\AuthController::class, 'registerPage'])->middleware(['guest'])->name("register");
 
