@@ -52,50 +52,6 @@
             right: -5px;
         }
 
-        .cart-info {
-            display: none;
-            position: absolute;
-            background: #fff;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            border-radius: 5px;
-            z-index: 1;
-            text-align: left;
-            width: 300px;
-
-            transform: translateX(-50%);
-        }
-
-        .cart:hover .cart-info {
-            display: block;
-        }
-
-        .product-image {
-            max-width: 30%;
-            height: auto;
-        }
-
-        .product-details {
-            flex-grow: 1;
-            margin-left: 10px;
-            /* Add some space between image and details */
-        }
-
-        .quantity,
-        .price {
-            display: inline-block;
-            margin-bottom: 5px;
-            /* Add some space between quantity and price */
-        }
-
-
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-        }
 
         .add-to-cart-button {
             background-color: #007bff;
@@ -203,44 +159,13 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right ">
                             <li class="nav-item">
-                                <a href="#" class="cart">
+                                <a href="{{ route('shop.cart') }}" class="cart">
                                     <span class="cart-icon">
                                         <i class="fa fa-shopping-cart text-white"></i>
                                         <!-- Font Awesome shopping cart icon -->
                                         <sup class="badge badge-primary">2</sup>
                                     </span>
-                                    <div class="cart-info">
-                                        <!-- Product 1 -->
-                                        <div class="cart-item">
-                                            <img src="{{ asset('frontEnd/img/product/p2.jpg') }}" alt="Product Image"
-                                                class="product-image">
-                                            <div class="product-details">
-                                                <p>
-                                                    <span class="quantity">Quantity: 2</span>
-                                                    <span class="price">Price: $20.00</span>
-                                                </p>
-                                            </div>
-                                        </div>
 
-                                        <!-- Product 2 -->
-                                        <div class="cart-item">
-                                            <img src="{{ asset('frontEnd/img/product/p2.jpg') }}" alt="Product Image"
-                                                class="product-image">
-                                            <div class="product-details">
-                                                <p>
-                                                    <span class="quantity">Quantity: 2</span>
-                                                    <span class="price">Price: $20.00</span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Additional products can be dynamically added here in the same format -->
-
-                                        <!-- Cart footer with Add to Cart button -->
-                                        <div class="card-footer">
-                                            <button class="add-to-cart-button btn-block">Add to Cart</button>
-                                        </div>
-                                    </div>
                                 </a>
                             </li>
 
