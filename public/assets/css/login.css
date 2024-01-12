@@ -1,0 +1,136 @@
+.user-login-area {
+    position: relative;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.user-login-area .container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    border: 1px solid #eee;
+    /* box-shadow: 0px 0px 15px #ccc; */
+    border-radius: 8px 8px;
+    overflow: hidden;
+    border: 4px solid #eee;
+}
+.user-login-area .container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.login-logo{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.login-logo img {
+    max-width: 150px;
+}
+.user-login-area .container .user .formBx form {
+    width: 100%;
+}
+.user-login-area .container .user .imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #ff0;
+  transition: 0.5s;
+}
+.user-login-area .container .user .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user-login-area .container .user .formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+.user-login-area .container .user .formBx form h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+.user-login-area .theme-input-box {
+    margin-top: 15px;
+}
+.user-login-area .theme-input-box .theme-btn {
+    width: 100%;
+    padding: 10px 15px;
+}
+.user-login-area .container .user .formBx form .signup {
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.user-login-area .container .user .formBx form .signup a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #f7941d;
+}
+.user-login-area .container .signupBx {
+  pointer-events: none;
+}
+.user-login-area .container.active .signupBx {
+  pointer-events: initial;
+}
+.user-login-area .container .signupBx .formBx {
+  left: 100%;
+}
+.user-login-area .container.active .signupBx .formBx {
+  left: 0;
+}
+.user-login-area .container .signupBx .imgBx {
+  left: -100%;
+}
+.user-login-area .container.active .signupBx .imgBx {
+  left: 0%;
+}
+.user-login-area .container .signinBx .formBx {
+  left: 0%;
+}
+.user-login-area .container.active .signinBx .formBx {
+  left: 100%;
+}
+.user-login-area .container .signinBx .imgBx {
+  left: 0%;
+}
+.user-login-area .container.active .signinBx .imgBx {
+  left: -100%;
+}
+@media (max-width: 991px) {
+  .user-login-area .container {
+    max-width: 400px;
+  }
+  .user-login-area .container .imgBx {
+    display: none;
+  }
+  .user-login-area .container .user .formBx {
+    width: 100%;
+  }
+}

@@ -1,0 +1,110 @@
+.theme-gold .header-top{
+	background-image: url(../../images/gold-header-bg.png);
+}
+.theme-gold span.theme-logo{
+	background-image: url(../../images/gold-logo.png);	
+}
+.theme-gold .slider-area .owl-nav button > span.sl-arrow-left {
+	background-image: url(../../images/gold-arrow-left.svg);	
+}
+.theme-gold .slider-area .owl-nav button > span.sl-arrow-right {
+	background-image: url(../../images/gold-arrow-right.svg);	
+}
+.theme-gold .header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-link:hover, 
+.theme-gold .header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-link.active,
+.theme-gold .banner-box .banner-description > span,
+.theme-gold .theme-btn:hover,
+.theme-gold .furry-friend-content .furry-top-title .theme-description,
+.theme-gold .theme-title > a:hover,
+.theme-gold .product-box .pro-whislist-ico,
+.theme-gold .product-box .product-content > span,
+.theme-gold .product-box .product-content .product-ratting > i.ratting-active, 
+.theme-gold .cart-pro-content .product-ratting > i.ratting-active,
+.theme-gold .special-discount-box h4,
+.theme-gold .blog-meta > span,
+.theme-gold .blog-read-more-btn > a,
+.theme-gold .footer-content ul li > a > i,
+.theme-gold .footer-title .theme-title > i,
+.theme-gold .slide-content ul li .slide-remove-btn,
+.theme-gold .testimonial-text span,
+.theme-gold .shopping-cart-table table > tbody > tr > td .cart-subtotal, 
+.theme-gold .theme-table table > tbody > tr > td > .cart-subtotal,
+.theme-gold .shopping-cart-box.widget-box .widget .subtotal-content ul li span,
+.theme-gold .user-login-area .container .user .formBx form .signup a,
+.theme-gold .content-404 .sub-link a,
+.theme-gold .faq-page-area .faq-service-box .faq-call p,
+.theme-gold .sidebar-widget-box > .sidebar-category > li > a.active > span,
+.theme-gold .short-tab .nav-tabs .nav-item .nav-link.active,
+.theme-gold .shop-detail-content .product-ratting > i.ratting-active,
+.theme-gold .review-ratting-box .product-ratting > i.ratting-active,
+.theme-gold .widget-tag li a:hover,
+.theme-gold .social-icons li a,
+.theme-gold .social-icons li a i,
+.theme-gold .small-title,
+.theme-gold .footer-content ul li > a:hover,
+.theme-gold .sidebar-widget-box > .sidebar-category > li > a:hover, 
+.theme-gold .sidebar-widget-box > .sidebar-category > li > a.active, 
+.theme-gold .product-sidebar-size .sidebar-widget-box ul > li > a:hover, 
+.theme-gold .product-sidebar-size .sidebar-widget-box ul > li:hover,
+.theme-gold .order-tracking-box .order-tracking-header h2,
+.theme-gold .search-page-box h2 > b{
+	color: #c79864;
+}
+.theme-gold .header-right-btn > ul > li > a > .budge,
+.theme-gold .switch-button,
+.theme-gold .product-box .prr-new-label,
+.theme-gold .social-media-box > .social-icon > li > a:hover,
+.theme-gold .slide-header,
+.theme-gold .owl-dots .owl-dot.active,
+.theme-gold .about-service-box .service-box .service-icon,
+.theme-gold .custom-checkbox .custom-control-input:checked~.custom-control-label::before, 
+.theme-gold .custom-control-input:active~.custom-control-label::before, 
+.theme-gold .custom-radio .custom-control-input:checked~.custom-control-label::before,
+.theme-gold .faq-box .faq-box-list a.active,
+.theme-gold .sidebar-widget .widget-title::after,
+.theme-gold .product-sidebar-tag .sidebar-widget-box > ul > li:hover > a, 
+.theme-gold .product-sidebar-tag .sidebar-widget-box > ul > li > a.active,
+.theme-gold .theme-pagination .pagination .page-item .page-link:hover, 
+.theme-gold .theme-pagination .pagination .page-item .page-link.active,
+.theme-gold .product-weight ul > li > a:hover, 
+.theme-gold .product-weight ul > li > a.active,
+.theme-gold .order-tracking-chart::after,
+.theme-gold .order-tracking-chart > .order-tracking-chart-box.active::before{
+	background-color: #c79864;	
+}
+.theme-gold .theme-btn,
+.theme-gold .product-box .pro-whislist-ico.whislist-show,
+.theme-gold .footer-newsletter .subscribe-btn,
+.theme-gold .theme-input-box .page-serach-btn,
+.theme-gold .widget-tag .widget-tag li > a:hover,
+.theme-gold .social-icons li a:hover{
+	background-color: #c79864;
+	border-color: #c79864;
+}
+.theme-gold .nav.nav-tabs.pet-tab-box .nav-item > .nav-link.active,
+.theme-gold .blog-post-content blockquote p,
+.theme-gold .social-icons li a,
+.theme-gold #days .second-bg, 
+.theme-gold #hours .second-bg, 
+.theme-gold #minutes .second-bg, 
+.theme-gold #months .second-bg, 
+.theme-gold #seconds .second-bg, 
+.theme-gold #years .second-bg,
+.theme-gold #days .first-bg, 
+.theme-gold #hours .first-bg, 
+.theme-gold #minutes .first-bg, 
+.theme-gold #months .first-bg, 
+.theme-gold #seconds .first-bg, 
+.theme-gold #years .first-bg{
+	border-color: #c79864;
+}
+.theme-gold .nav.nav-tabs.pet-tab-box .nav-item > .nav-link::before{
+	border-top: 15px solid #c79864;
+}
+.theme-gold .page-up-box{
+	color: #c79864 !important;
+}
+.theme-gold .pro-detail-tab .nav-tabs .nav-item .nav-link.active{
+	background-color: #c79864;
+    border-color: #c79864 #c79864 #c79864;
+}

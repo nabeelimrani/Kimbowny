@@ -1,0 +1,110 @@
+.theme-light-blue .header-top{
+	background-image: url(../../images/light-blue-header-bg.png);
+}
+.theme-light-blue span.theme-logo{
+	background-image: url(../../images/light-blue-logo.png);	
+}
+.theme-light-blue .slider-area .owl-nav button > span.sl-arrow-left {
+	background-image: url(../../images/light-blue-arrow-left.svg);	
+}
+.theme-light-blue .slider-area .owl-nav button > span.sl-arrow-right {
+	background-image: url(../../images/light-blue-arrow-right.svg);	
+}
+.theme-light-blue .header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-link:hover, 
+.theme-light-blue .header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-link.active,
+.theme-light-blue .banner-box .banner-description > span,
+.theme-light-blue .theme-btn:hover,
+.theme-light-blue .furry-friend-content .furry-top-title .theme-description,
+.theme-light-blue .theme-title > a:hover,
+.theme-light-blue .product-box .pro-whislist-ico,
+.theme-light-blue .product-box .product-content > span,
+.theme-light-blue .product-box .product-content .product-ratting > i.ratting-active, 
+.theme-light-blue .cart-pro-content .product-ratting > i.ratting-active,
+.theme-light-blue .special-discount-box h4,
+.theme-light-blue .blog-meta > span,
+.theme-light-blue .blog-read-more-btn > a,
+.theme-light-blue .footer-content ul li > a > i,
+.theme-light-blue .footer-title .theme-title > i,
+.theme-light-blue .slide-content ul li .slide-remove-btn,
+.theme-light-blue .testimonial-text span,
+.theme-light-blue .shopping-cart-table table > tbody > tr > td .cart-subtotal, 
+.theme-light-blue .theme-table table > tbody > tr > td > .cart-subtotal,
+.theme-light-blue .shopping-cart-box.widget-box .widget .subtotal-content ul li span,
+.theme-light-blue .user-login-area .container .user .formBx form .signup a,
+.theme-light-blue .content-404 .sub-link a,
+.theme-light-blue .faq-page-area .faq-service-box .faq-call p,
+.theme-light-blue .sidebar-widget-box > .sidebar-category > li > a.active > span,
+.theme-light-blue .short-tab .nav-tabs .nav-item .nav-link.active,
+.theme-light-blue .shop-detail-content .product-ratting > i.ratting-active,
+.theme-light-blue .review-ratting-box .product-ratting > i.ratting-active,
+.theme-light-blue .widget-tag li a:hover,
+.theme-light-blue .social-icons li a,
+.theme-light-blue .social-icons li a i,
+.theme-light-blue .small-title,
+.theme-light-blue .footer-content ul li > a:hover,
+.theme-light-blue .sidebar-widget-box > .sidebar-category > li > a:hover, 
+.theme-light-blue .sidebar-widget-box > .sidebar-category > li > a.active, 
+.theme-light-blue .product-sidebar-size .sidebar-widget-box ul > li > a:hover, 
+.theme-light-blue .product-sidebar-size .sidebar-widget-box ul > li:hover,
+.theme-light-blue .order-tracking-box .order-tracking-header h2,
+.theme-light-blue .search-page-box h2 > b{
+	color: #37b8df;
+}
+.theme-light-blue .header-right-btn > ul > li > a > .budge,
+.theme-light-blue .switch-button,
+.theme-light-blue .product-box .prr-new-label,
+.theme-light-blue .social-media-box > .social-icon > li > a:hover,
+.theme-light-blue .slide-header,
+.theme-light-blue .owl-dots .owl-dot.active,
+.theme-light-blue .about-service-box .service-box .service-icon,
+.theme-light-blue .custom-checkbox .custom-control-input:checked~.custom-control-label::before, 
+.theme-light-blue .custom-control-input:active~.custom-control-label::before, 
+.theme-light-blue .custom-radio .custom-control-input:checked~.custom-control-label::before,
+.theme-light-blue .faq-box .faq-box-list a.active,
+.theme-light-blue .sidebar-widget .widget-title::after,
+.theme-light-blue .product-sidebar-tag .sidebar-widget-box > ul > li:hover > a, 
+.theme-light-blue .product-sidebar-tag .sidebar-widget-box > ul > li > a.active,
+.theme-light-blue .theme-pagination .pagination .page-item .page-link:hover, 
+.theme-light-blue .theme-pagination .pagination .page-item .page-link.active,
+.theme-light-blue .product-weight ul > li > a:hover, 
+.theme-light-blue .product-weight ul > li > a.active,
+.theme-light-blue .order-tracking-chart::after,
+.theme-light-blue .order-tracking-chart > .order-tracking-chart-box.active::before{
+	background-color: #37b8df;	
+}
+.theme-light-blue .theme-btn,
+.theme-light-blue .product-box .pro-whislist-ico.whislist-show,
+.theme-light-blue .footer-newsletter .subscribe-btn,
+.theme-light-blue .theme-input-box .page-serach-btn,
+.theme-light-blue .widget-tag .widget-tag li > a:hover,
+.theme-light-blue .social-icons li a:hover{
+	background-color: #37b8df;
+	border-color: #37b8df;
+}
+.theme-light-blue .nav.nav-tabs.pet-tab-box .nav-item > .nav-link.active,
+.theme-light-blue .blog-post-content blockquote p,
+.theme-light-blue .social-icons li a,
+.theme-light-blue #days .second-bg, 
+.theme-light-blue #hours .second-bg, 
+.theme-light-blue #minutes .second-bg, 
+.theme-light-blue #months .second-bg, 
+.theme-light-blue #seconds .second-bg, 
+.theme-light-blue #years .second-bg,
+.theme-light-blue #days .first-bg, 
+.theme-light-blue #hours .first-bg, 
+.theme-light-blue #minutes .first-bg, 
+.theme-light-blue #months .first-bg, 
+.theme-light-blue #seconds .first-bg, 
+.theme-light-blue #years .first-bg{
+	border-color: #37b8df;
+}
+.theme-light-blue .nav.nav-tabs.pet-tab-box .nav-item > .nav-link::before{
+	border-top: 15px solid #37b8df;
+}
+.theme-light-blue .page-up-box{
+	color: #37b8df !important;
+}
+.theme-light-blue .pro-detail-tab .nav-tabs .nav-item .nav-link.active{
+	background-color: #37b8df;
+    border-color: #37b8df #37b8df #37b8df;
+}

@@ -1,0 +1,110 @@
+.theme-green .header-top{
+	background-image: url(../../images/green-header-bg.png);
+}
+.theme-green span.theme-logo{
+	background-image: url(../../images/green-logo.png);	
+}
+.theme-green .slider-area .owl-nav button > span.sl-arrow-left {
+	background-image: url(../../images/green-arrow-left.svg);	
+}
+.theme-green .slider-area .owl-nav button > span.sl-arrow-right {
+	background-image: url(../../images/green-arrow-right.svg);	
+}
+.theme-green .header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-link:hover, 
+.theme-green .header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-link.active,
+.theme-green .banner-box .banner-description > span,
+.theme-green .theme-btn:hover,
+.theme-green .furry-friend-content .furry-top-title .theme-description,
+.theme-green .theme-title > a:hover,
+.theme-green .product-box .pro-whislist-ico,
+.theme-green .product-box .product-content > span,
+.theme-green .product-box .product-content .product-ratting > i.ratting-active, 
+.theme-green .cart-pro-content .product-ratting > i.ratting-active,
+.theme-green .special-discount-box h4,
+.theme-green .blog-meta > span,
+.theme-green .blog-read-more-btn > a,
+.theme-green .footer-content ul li > a > i,
+.theme-green .footer-title .theme-title > i,
+.theme-green .slide-content ul li .slide-remove-btn,
+.theme-green .testimonial-text span,
+.theme-green .shopping-cart-table table > tbody > tr > td .cart-subtotal, 
+.theme-green .theme-table table > tbody > tr > td > .cart-subtotal,
+.theme-green .shopping-cart-box.widget-box .widget .subtotal-content ul li span,
+.theme-green .user-login-area .container .user .formBx form .signup a,
+.theme-green .content-404 .sub-link a,
+.theme-green .faq-page-area .faq-service-box .faq-call p,
+.theme-green .sidebar-widget-box > .sidebar-category > li > a.active > span,
+.theme-green .short-tab .nav-tabs .nav-item .nav-link.active,
+.theme-green .shop-detail-content .product-ratting > i.ratting-active,
+.theme-green .review-ratting-box .product-ratting > i.ratting-active,
+.theme-green .widget-tag li a:hover,
+.theme-green .social-icons li a,
+.theme-green .social-icons li a i,
+.theme-green .small-title,
+.theme-green .footer-content ul li > a:hover,
+.theme-green .sidebar-widget-box > .sidebar-category > li > a:hover, 
+.theme-green .sidebar-widget-box > .sidebar-category > li > a.active, 
+.theme-green .product-sidebar-size .sidebar-widget-box ul > li > a:hover, 
+.theme-green .product-sidebar-size .sidebar-widget-box ul > li:hover,
+.theme-green .order-tracking-box .order-tracking-header h2,
+.theme-green .search-page-box h2 > b{
+	color: #31b164;
+}
+.theme-green .header-right-btn > ul > li > a > .budge,
+.theme-green .switch-button,
+.theme-green .product-box .prr-new-label,
+.theme-green .social-media-box > .social-icon > li > a:hover,
+.theme-green .slide-header,
+.theme-green .owl-dots .owl-dot.active,
+.theme-green .about-service-box .service-box .service-icon,
+.theme-green .custom-checkbox .custom-control-input:checked~.custom-control-label::before, 
+.theme-green .custom-control-input:active~.custom-control-label::before, 
+.theme-green .custom-radio .custom-control-input:checked~.custom-control-label::before,
+.theme-green .faq-box .faq-box-list a.active,
+.theme-green .sidebar-widget .widget-title::after,
+.theme-green .product-sidebar-tag .sidebar-widget-box > ul > li:hover > a, 
+.theme-green .product-sidebar-tag .sidebar-widget-box > ul > li > a.active,
+.theme-green .theme-pagination .pagination .page-item .page-link:hover, 
+.theme-green .theme-pagination .pagination .page-item .page-link.active,
+.theme-green .product-weight ul > li > a:hover, 
+.theme-green .product-weight ul > li > a.active,
+.theme-green .order-tracking-chart::after,
+.theme-green .order-tracking-chart > .order-tracking-chart-box.active::before{
+	background-color: #31b164;	
+}
+.theme-green .theme-btn,
+.theme-green .product-box .pro-whislist-ico.whislist-show,
+.theme-green .footer-newsletter .subscribe-btn,
+.theme-green .theme-input-box .page-serach-btn,
+.theme-green .widget-tag .widget-tag li > a:hover,
+.theme-green .social-icons li a:hover{
+	background-color: #31b164;
+	border-color: #31b164;
+}
+.theme-green .nav.nav-tabs.pet-tab-box .nav-item > .nav-link.active,
+.theme-green .blog-post-content blockquote p,
+.theme-green .social-icons li a,
+.theme-green #days .second-bg, 
+.theme-green #hours .second-bg, 
+.theme-green #minutes .second-bg, 
+.theme-green #months .second-bg, 
+.theme-green #seconds .second-bg, 
+.theme-green #years .second-bg,
+.theme-green #days .first-bg, 
+.theme-green #hours .first-bg, 
+.theme-green #minutes .first-bg, 
+.theme-green #months .first-bg, 
+.theme-green #seconds .first-bg, 
+.theme-green #years .first-bg{
+	border-color: #31b164;
+}
+.theme-green .nav.nav-tabs.pet-tab-box .nav-item > .nav-link::before{
+	border-top: 15px solid #31b164;
+}
+.theme-green .page-up-box{
+	color: #31b164 !important;
+}
+.theme-green .pro-detail-tab .nav-tabs .nav-item .nav-link.active{
+	background-color: #31b164;
+    border-color: #31b164 #31b164 #31b164;
+}

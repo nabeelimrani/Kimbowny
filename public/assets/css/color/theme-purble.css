@@ -1,0 +1,110 @@
+.theme-purble .header-top{
+	background-image: url(../../images/purble-header-bg.png);
+}
+.theme-purble span.theme-logo{
+	background-image: url(../../images/purble-logo.png);	
+}
+.theme-purble .slider-area .owl-nav button > span.sl-arrow-left {
+	background-image: url(../../images/purble-arrow-left.svg);	
+}
+.theme-purble .slider-area .owl-nav button > span.sl-arrow-right {
+	background-image: url(../../images/purble-arrow-right.svg);	
+}
+.theme-purble .header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-link:hover, 
+.theme-purble .header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-link.active,
+.theme-purble .banner-box .banner-description > span,
+.theme-purble .theme-btn:hover,
+.theme-purble .furry-friend-content .furry-top-title .theme-description,
+.theme-purble .theme-title > a:hover,
+.theme-purble .product-box .pro-whislist-ico,
+.theme-purble .product-box .product-content > span,
+.theme-purble .product-box .product-content .product-ratting > i.ratting-active, 
+.theme-purble .cart-pro-content .product-ratting > i.ratting-active,
+.theme-purble .special-discount-box h4,
+.theme-purble .blog-meta > span,
+.theme-purble .blog-read-more-btn > a,
+.theme-purble .footer-content ul li > a > i,
+.theme-purble .footer-title .theme-title > i,
+.theme-purble .slide-content ul li .slide-remove-btn,
+.theme-purble .testimonial-text span,
+.theme-purble .shopping-cart-table table > tbody > tr > td .cart-subtotal, 
+.theme-purble .theme-table table > tbody > tr > td > .cart-subtotal,
+.theme-purble .shopping-cart-box.widget-box .widget .subtotal-content ul li span,
+.theme-purble .user-login-area .container .user .formBx form .signup a,
+.theme-purble .content-404 .sub-link a,
+.theme-purble .faq-page-area .faq-service-box .faq-call p,
+.theme-purble .sidebar-widget-box > .sidebar-category > li > a.active > span,
+.theme-purble .short-tab .nav-tabs .nav-item .nav-link.active,
+.theme-purble .shop-detail-content .product-ratting > i.ratting-active,
+.theme-purble .review-ratting-box .product-ratting > i.ratting-active,
+.theme-purble .widget-tag li a:hover,
+.theme-purble .social-icons li a,
+.theme-purble .social-icons li a i,
+.theme-purble .small-title,
+.theme-purble .footer-content ul li > a:hover,
+.theme-purble .sidebar-widget-box > .sidebar-category > li > a:hover, 
+.theme-purble .sidebar-widget-box > .sidebar-category > li > a.active, 
+.theme-purble .product-sidebar-size .sidebar-widget-box ul > li > a:hover, 
+.theme-purble .product-sidebar-size .sidebar-widget-box ul > li:hover,
+.theme-purble .order-tracking-box .order-tracking-header h2,
+.theme-purble .search-page-box h2 > b{
+	color: #9644e2;
+}
+.theme-purble .header-right-btn > ul > li > a > .budge,
+.theme-purble .switch-button,
+.theme-purble .product-box .prr-new-label,
+.theme-purble .social-media-box > .social-icon > li > a:hover,
+.theme-purble .slide-header,
+.theme-purble .owl-dots .owl-dot.active,
+.theme-purble .about-service-box .service-box .service-icon,
+.theme-purble .custom-checkbox .custom-control-input:checked~.custom-control-label::before, 
+.theme-purble .custom-control-input:active~.custom-control-label::before, 
+.theme-purble .custom-radio .custom-control-input:checked~.custom-control-label::before,
+.theme-purble .faq-box .faq-box-list a.active,
+.theme-purble .sidebar-widget .widget-title::after,
+.theme-purble .product-sidebar-tag .sidebar-widget-box > ul > li:hover > a, 
+.theme-purble .product-sidebar-tag .sidebar-widget-box > ul > li > a.active,
+.theme-purble .theme-pagination .pagination .page-item .page-link:hover, 
+.theme-purble .theme-pagination .pagination .page-item .page-link.active,
+.theme-purble .product-weight ul > li > a:hover, 
+.theme-purble .product-weight ul > li > a.active,
+.theme-purble .order-tracking-chart::after,
+.theme-purble .order-tracking-chart > .order-tracking-chart-box.active::before{
+	background-color: #9644e2;	
+}
+.theme-purble .theme-btn,
+.theme-purble .product-box .pro-whislist-ico.whislist-show,
+.theme-purble .footer-newsletter .subscribe-btn,
+.theme-purble .theme-input-box .page-serach-btn,
+.theme-purble .widget-tag .widget-tag li > a:hover,
+.theme-purble .social-icons li a:hover{
+	background-color: #9644e2;
+	border-color: #9644e2;
+}
+.theme-purble .nav.nav-tabs.pet-tab-box .nav-item > .nav-link.active,
+.theme-purble .blog-post-content blockquote p,
+.theme-purble .social-icons li a,
+.theme-purble #days .second-bg, 
+.theme-purble #hours .second-bg, 
+.theme-purble #minutes .second-bg, 
+.theme-purble #months .second-bg, 
+.theme-purble #seconds .second-bg, 
+.theme-purble #years .second-bg,
+.theme-purble #days .first-bg, 
+.theme-purble #hours .first-bg, 
+.theme-purble #minutes .first-bg, 
+.theme-purble #months .first-bg, 
+.theme-purble #seconds .first-bg, 
+.theme-purble #years .first-bg{
+	border-color: #9644e2;
+}
+.theme-purble .nav.nav-tabs.pet-tab-box .nav-item > .nav-link::before{
+	border-top: 15px solid #9644e2;
+}
+.theme-purble .page-up-box{
+	color: #9644e2 !important;
+}
+.theme-purble .pro-detail-tab .nav-tabs .nav-item .nav-link.active{
+	background-color: #9644e2;
+    border-color: #9644e2 #9644e2 #9644e2;
+}
