@@ -54,3 +54,49 @@
       <script src="{{asset('assets/js/jquery.cookie.min.js')}}"></script>
       <script src="{{asset('/assets/js/custom.js')}}"></script>
 </html>
+<script>
+  $(document).on("click","#addToCart",function(){
+    var id=$(this).data("id");
+    var success=function (data)
+    {
+     loadcart();
+    }
+    var data={
+      id:id,
+      qty:1,
+    }
+  ajaxcall('/addToCart',data,'post',success)
+  });
+
+  function loadcart()
+  {
+    var success=function ()
+    {
+      alert("cart loaded");
+    };
+    ajaxcall('/loadCart',null,'post',success)
+  }
+  function ajaxcall(url,data=null,method='post',success){
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+
+    $.ajax({
+
+      url:url,
+      method:method,
+      data:data,
+      dataType:'json',
+      success:success,
+      error : function (xhr, status, error) {
+        console.error(error);
+      },
+    });
+  }
+  function ChangeImage(newImageUrl) {
+    var imageElement = document.getElementById('image-change');
+    imageElement.src = newImageUrl;
+  }
+</script>

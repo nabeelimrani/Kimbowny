@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreignId("brand_id");
             $table->foreignId("pet_id");
             $table->foreignId("category_id");
+            $table->boolean("feature")->default(0);
             $table->string("photo");
             $table->timestamps();
         });

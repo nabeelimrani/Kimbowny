@@ -22,7 +22,7 @@ class CategorySeeder extends Seeder
 ];
     foreach ($petStoreCategories as $key => $cat) {
         $key++;
-        Category::create(["name"=>$cat,"image"=>"assets/images/category-".$key.".png"]);
+        Category::create(["name"=>$cat,"image"=>"assets/images/category/category-".$key.".png"]);
     }
     }
 }

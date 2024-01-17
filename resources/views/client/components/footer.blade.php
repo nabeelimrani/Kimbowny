@@ -101,7 +101,7 @@
                <div class="row">
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                      <div class="copyright-box">
-                        <p>Copyright © 2020 Pet Shop. All rights reserved</p>
+                        <p>Copyright © 2024 KimBowny. All rights reserved</p>
                      </div>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">

@@ -43,6 +43,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(User::class, 'referred_by');
     }
+  public function wishlist()
+  {
+    return $this->belongsToMany(Product::class, 'wishlists');
+  }
 
     /**
      * Get the user who referred this user.

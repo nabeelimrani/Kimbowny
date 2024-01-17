@@ -1,95 +1,21 @@
-<!doctype html>
-<html lang="en">
-
-<!-- Mirrored from theme.bitrixinfotech.com/pet-shop/demo1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jan 2024 06:28:10 GMT -->
-<head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!-- Css -->
-
-      <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
-      <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-      <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
-      <link rel="stylesheet" href="{{asset('assets/fontawesome/css/all.min.css')}}">
-      <!-- Css -->
-      <title>KimBowny Buy Pet Products Online With Best Prices | Pet Store</title>
-      <meta name="Keywords" content="Pet shop, online pet shop, pet food, online pet food, best pet food">
-      <meta name="Description" content="We are leading online pet store for all your pet supply needs. We deliver our products all over the world with the best prices available.">
-      <meta name="twitter:card" content="summary">
-      <meta name="twitter:description" content="We are leading online pet store for all your pet supply needs. We deliver our products all over the world with the best prices available.">
-      <meta name="twitter:title" content="Buy Pet Products Online With Best Prices | Pet Shop">
-      <meta name="twitter:image" content="assets/images/meta-banner.jpg">
-      <meta property="og:locale" content="en_US">
-      <meta property="og:type" content="article">
-      <meta property="og:title" content="Buy Pet Products Online With Best Prices | Pet Shop">
-      <meta property="og:description" content="We are leading online pet store for all your pet supply needs. We deliver our products all over the world with the best prices available.">
-      <meta property="og:url" content="">
-      <meta property="og:site_name" content="Pet Shop">
-      <meta property="og:image" content="assets/images/meta-banner.jpg">
-      <meta property="og:image:secure_url" content="assets/images/meta-banner.jpg">
-      <meta name="robots" content="noindex,nofollow">
-   </head>
-   <body>
-      <!-- Header -->
-            @include("client.components.header")
-      <!-- Header -->
+@extends("layouts.app")
+@section("content")
       <!-- Slider -->
-            @include("client.components.slider")
-      <!-- Slider -->
-      <div class="page-main">
+    @include("client.components.slider")
          <!-- Our Service -->
          <section class="our-service-area">
             <div class="container">
                <div class="row">
+                    @foreach($categories as $category)
                   <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
                      <div class="category-week-box text-center">
                         <div class="category-week-img">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/dog-food.html"><img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/category-1.png" alt=""></a>
+                           <a href="#"><img src="{{asset($category->image)}}" alt="no image found"></a>
                         </div>
-                        <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/dog-food.html">Dog Food</a></h3>
+                        <h3 class="theme-title"><a href="#">{{$category->name}}</a></h3>
                      </div>
                   </div>
-                  <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
-                     <div class="category-week-box text-center">
-                        <div class="category-week-img">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/cart.html"><img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/category-2.png" alt=""></a>
-                        </div>
-                        <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/cart.html">Cat Food</a></h3>
-                     </div>
-                  </div>
-                  <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
-                     <div class="category-week-box text-center">
-                        <div class="category-week-img">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/fish-food.html"><img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/category-3.png" alt=""></a>
-                        </div>
-                        <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/fish-food.html">Fish Food</a></h3>
-                     </div>
-                  </div>
-                  <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
-                     <div class="category-week-box text-center">
-                        <div class="category-week-img">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/bird-food.html"><img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/category-4.png" alt=""></a>
-                        </div>
-                        <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/bird-food.html">Bird Food</a></h3>
-                     </div>
-                  </div>
-                  <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
-                     <div class="category-week-box text-center">
-                        <div class="category-week-img">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/reptile-food.html"><img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/category-5.png" alt=""></a>
-                        </div>
-                        <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/reptile-food.html">Reptile Food</a></h3>
-                     </div>
-                  </div>
-                  <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
-                     <div class="category-week-box text-center">
-                        <div class="category-week-img">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/small-pet-food.html"><img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/category-6.png" alt=""></a>
-                        </div>
-                        <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/small-pet-food.html">Small Pet Food</a></h3>
-                     </div>
-                  </div>
+                   @endforeach
                </div>
             </div>
          </section>
@@ -142,17 +68,18 @@
                <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                      <div class="page-title text-center">
-                        <h2>Most Populer</h2>
+                        <h2>Featured Products</h2>
                         <p>Here are listed different kinds of healthy & nutritious popular pet foods for you to choose for your beloved pet.</p>
                      </div>
                   </div>
                </div>
                <div class="row">
+                   @foreach($fproducts as $fproduct)
                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                     <div class="product-box text-center">
+                     <div class="product-box {{$fproduct->quantity<1?'out-of-stock-box':''}} text-center">
                         <div class="product-images">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/product1.jpg" alt="">
+                           <a href="{{$fproduct->pagelink()}}">
+                           <img src="{{asset($fproduct->photo)}}" alt="">
                            </a>
                            <div class="pro-whislist-ico">
                               <i class="far fa-heart"></i>
@@ -160,98 +87,31 @@
                            <span class="prr-new-label">New</span>
                         </div>
                         <div class="product-content">
-                           <span>BEEF</span>
-                           <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Air Dried Beef</a></h3>
+                           <span>{{$fproduct->category->name}}</span>
+                           <h3 class="theme-title"><a href="#">{{$fproduct->name}}</a></h3>
                            <div class="product-ratting">
-                              <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                              <i class="fas fa-star ratting-active"></i>
+                               <i class="fas fa-star ratting-active"></i>
+                               <i class="fas fa-star ratting-active"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
                            </div>
                            <div class="product-price">
-                              <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
+                              <span class="price"><del>${{$fproduct->sale}}}</del> </span>
+                              {{--<ins>$28.00</ins>--}}
                            </div>
                            <div class="product-btn">
-                              <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
+                              <a href="#" class="theme-btn">Add To Cart</a>
                            </div>
                         </div>
+                       @if($fproduct->quantity<1)
+                         <div class="product-out-stock">
+                           <span>Out Of Stock</span>
+                         </div>
+                       @endif
                      </div>
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                     <div class="product-box text-center">
-                        <div class="product-images">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/product2.jpg" alt="">
-                           </a>
-                           <div class="pro-whislist-ico">
-                              <i class="far fa-heart"></i>
-                           </div>
-                           <span class="prr-new-label">New</span>
-                        </div>
-                        <div class="product-content">
-                           <span>FOOD</span>
-                           <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Air Dried Lamb</a></h3>
-                           <div class="product-ratting">
-                              <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                           </div>
-                           <div class="product-price">
-                              <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                           </div>
-                           <div class="product-btn">
-                              <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                     <div class="product-box text-center">
-                        <div class="product-images">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/product3.jpg" alt="">
-                           </a>
-                           <div class="pro-whislist-ico">
-                              <i class="far fa-heart"></i>
-                           </div>
-                           <span class="prr-new-label">New</span>
-                        </div>
-                        <div class="product-content">
-                           <span>FISH</span>
-                           <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Air Dried Salmon</a></h3>
-                           <div class="product-ratting">
-                              <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                           </div>
-                           <div class="product-price">
-                              <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                           </div>
-                           <div class="product-btn">
-                              <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                     <div class="product-box text-center">
-                        <div class="product-images">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/product4.jpg" alt="">
-                           </a>
-                           <div class="pro-whislist-ico">
-                              <i class="far fa-heart"></i>
-                           </div>
-                           <span class="prr-new-label">New</span>
-                        </div>
-                        <div class="product-content">
-                           <span>REWARDS</span>
-                           <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Beef Dog Rewards</a></h3>
-                           <div class="product-ratting">
-                              <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                           </div>
-                           <div class="product-price">
-                              <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                           </div>
-                           <div class="product-btn">
-                              <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                   @endforeach
                </div>
             </div>
          </section>
@@ -271,7 +131,7 @@
                         <p>Now your pet doesn’t have to wait anymore for its favorite food. This time, treat them very special by buying your pet's lovable food with the best deal available.</p>
                      </div>
                      <div class="pet-sale-btn">
-                        <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Shop Now</a>
+                        <a href="#" class="theme-btn">Shop Now</a>
                      </div>
                   </div>
                </div>
@@ -284,7 +144,7 @@
                <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                      <div class="page-title text-center">
-                        <h2>Featured Products</h2>
+                        <h2>Featured Pets Products</h2>
                         <p>Below are the products that have something special and unique than regular ones. This is specifically made for your pet’s health & happiness.</p>
                      </div>
                   </div>
@@ -292,42 +152,26 @@
                <div class="row">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                      <ul class="nav nav-tabs pet-tab-box" role="tablist">
+                       @foreach($pets as $pet)
                         <li class="nav-item">
-                           <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/cate1.jpg" alt=""> Dogs
+                           <a class="nav-link {{$pet->id==1?'active':''}}" data-toggle="tab" href="{{'#tabs-'.$pet->id}}" role="tab">
+                           <img src="{{$pet->image}}" alt=""> {{$pet->name}}
                            </a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/cate2.jpg" alt=""> Cats
-                           </a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/cate3.jpg" alt=""> Fishes
-                           </a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/cate4.jpg" alt=""> Small pets
-                           </a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" data-toggle="tab" href="#tabs-5" role="tab">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/cate5.jpg" alt=""> Birds
-                           </a>
-                        </li>
+                       @endforeach
                      </ul>
                      <!-- Tab panes -->
                      <div class="tab-content">
-                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                       @foreach($pets as $pet)
+                        <div class="tab-pane {{$pet->id==1?'active':''}}" id="{{'tabs-'.$pet->id}}" role="tabpanel">
                            <div class="featured-product-box">
                               <div class="row">
+                                @foreach($pet->products->take(8) as $product)
                                  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box out-of-stock-box text-center">
+                                    <div class="product-box {{$product->quantity<1?'out-of-stock-box':''}} text-center">
                                        <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/dog/dog1.jpg" alt="">
+                                          <a href="{{$product->pagelink()}}">
+                                          <img src="{{asset($product->photo)}}" alt="">
                                           </a>
                                           <div class="pro-whislist-ico">
                                              <i class="far fa-heart"></i>
@@ -335,549 +179,37 @@
                                        </div>
                                        <div class="product-content">
                                           <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Dog Biscuits</a></h3>
+                                          <h3 class="theme-title"><a href="#">{{$product->name}}</a></h3>
                                           <div class="product-ratting">
                                              <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                           </div>
                                           <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
+                                             <span class="price"><del>${{$product->sale}}</del> </span>
+{{--                                            <ins>$28.00</ins>--}}
                                           </div>
                                           <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
+                                             <div id="addToCart" data-id="{{$product->id}}" class="theme-btn">Add To Cart</div>
                                           </div>
                                        </div>
-                                       <div class="product-out-stock">
+                                      @if($product->quantity<1)
+                                        <div class="product-out-stock">
                                           <span>Out Of Stock</span>
-                                       </div>
+                                        </div>
+                                        @endif
+
                                     </div>
                                  </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/dog/dog2.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico">
-                                             <i class="far fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Peanut Butter</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/dog/dog3.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico">
-                                             <i class="far fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">All Breeds</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/dog/dog4.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico">
-                                             <i class="far fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Chunks in Gravy</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
+                                @endforeach
                                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="show-more-btn text-center">
-                                       <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop.html" class="theme-btn btn-light">Show More</a>
+                                       <a href="#" class="theme-btn btn-light">Show More</a>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div class="tab-pane" id="tabs-2" role="tabpanel">
-                           <div class="featured-product-box">
-                              <div class="row">
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/cat/cat1.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Tuna in Jelly</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/cat/cat2.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Intersand Odourlock</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/cat/cat3.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Drools Adult Dry Cat</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/cat/cat4.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Fish Chunks in Gravy</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="show-more-btn text-center">
-                                       <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop.html" class="theme-btn btn-light">Show More</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane" id="tabs-3" role="tabpanel">
-                           <div class="featured-product-box">
-                              <div class="row">
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/fish/fish1.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Optimum Fish Food</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/fish/fish2.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Optimum 3 in 1 Food</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/fish/fish3.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Tetra Bits Complete</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/fish/fish4.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Bioactive Formula</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="show-more-btn text-center">
-                                       <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop.html" class="theme-btn btn-light">Show More</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane" id="tabs-4" role="tabpanel">
-                           <div class="featured-product-box">
-                              <div class="row">
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/small-pet/small-pet1.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Pedigree Puppy</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/small-pet/small-pet2.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico whislist-show">
-                                             <i class="fas fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Drools Chicken</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/small-pet/small-pet3.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico">
-                                             <i class="far fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Pedigree Puppy Dog</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/small-pet/small-pet4.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico">
-                                             <i class="far fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Pedigree Puppy Dry</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="show-more-btn text-center">
-                                       <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop.html" class="theme-btn btn-light">Show More</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane" id="tabs-5" role="tabpanel">
-                           <div class="featured-product-box">
-                              <div class="row">
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/birds/birds1.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico">
-                                             <i class="far fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Puppies Petslife</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/birds/birds2.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico">
-                                             <i class="far fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Exotic Birds</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/birds/birds3.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico">
-                                             <i class="far fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Boltz Bird Food</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 ps-column-width">
-                                    <div class="product-box text-center">
-                                       <div class="product-images">
-                                          <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">
-                                          <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/category/birds/birds4.jpg" alt="">
-                                          </a>
-                                          <div class="pro-whislist-ico">
-                                             <i class="far fa-heart"></i>
-                                          </div>
-                                       </div>
-                                       <div class="product-content">
-                                          <span>BEEF</span>
-                                          <h3 class="theme-title"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html">Vitapol Economic Food</a></h3>
-                                          <div class="product-ratting">
-                                             <i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star ratting-active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                          </div>
-                                          <div class="product-price">
-                                             <span class="price"><del>$30.00</del> <ins>$28.00</ins></span>
-                                          </div>
-                                          <div class="product-btn">
-                                             <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop-detail.html" class="theme-btn">Add To Cart</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="show-more-btn text-center">
-                                       <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/shop.html" class="theme-btn btn-light">Show More</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                       @endforeach
+
                      </div>
                   </div>
                </div>
@@ -916,124 +248,11 @@
          </section>
          <!-- Special Discount -->
          <!-- Blog -->
-         <section class="blog-area page-paddings">
-            <div class="container">
-               <div class="row">
-                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                     <div class="page-title text-center">
-                        <h2>Read the latest blog posts</h2>
-                        <p>Our blog is a place to embrace those pets and the people who love them, with posts covering subjects like nutrition, physical and mental health, animal care, and more.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                     <div class="blog-box">
-                        <div class="blog-images">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/blog-detail.html">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/blog/blog1.jpg" alt="">
-                           </a>
-                           <div class="blog-date">
-                              <span>Sep 22, 2020</span>
-                           </div>
-                        </div>
-                        <div class="blog-content">
-                           <div class="blog-meta">
-                              <span>Pet</span>
-                           </div>
-                           <h3 class="theme-title">Colorful Dresses For Pet’s</h3>
-                           <p class="theme-description">As much as we love our dogs, if they’ve badly behaved it can sometimes be frustrating...</p>
-                           <div class="blog-read-more-btn"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/blog-detail.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a></div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                     <div class="blog-box">
-                        <div class="blog-images">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/blog-detail.html">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/blog/blog2.jpg" alt="">
-                           </a>
-                           <div class="blog-date">
-                              <span>Sep 22, 2020</span>
-                           </div>
-                        </div>
-                        <div class="blog-content">
-                           <div class="blog-meta">
-                              <span>Pet</span>
-                           </div>
-                           <h3 class="theme-title">Sleeping Mats For Dogs</h3>
-                           <p class="theme-description">As much as we love our dogs, if they’ve badly behaved it can sometimes be frustrating...</p>
-                           <div class="blog-read-more-btn"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/blog-detail.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a></div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                     <div class="blog-box">
-                        <div class="blog-images">
-                           <a href="https://theme.bitrixinfotech.com/pet-shop/demo1/blog-detail.html">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/blog/blog3.jpg" alt="">
-                           </a>
-                           <div class="blog-date">
-                              <span>Sep 22, 2020</span>
-                           </div>
-                        </div>
-                        <div class="blog-content">
-                           <div class="blog-meta">
-                              <span>Pet</span>
-                           </div>
-                           <h3 class="theme-title">Weekly Animal Sale</h3>
-                           <p class="theme-description">As much as we love our dogs, if they’ve badly behaved it can sometimes be frustrating...</p>
-                           <div class="blog-read-more-btn"><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/blog-detail.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+
          <!-- Blog -->
-      </div>
-      <!-- Footer -->
-      @include("client.components.footer")
-      <!-- Footer -->
-      <!-- Shopping Cart Slide -->
-       @include("client.components.sideCart")
-      <!-- Shopping Cart Slide -->
-      <!-- Whishlist Slide -->
- @include("client.components.sideWishlist")
-      <!-- Whishlist Slide -->
-      <!-- Preloader -->
-      <div class="theme-preloader">
-         <span><img src="{{asset('assets/images/dog-preloader.gif')}}" alt=""></span>
-      </div>
-      <!-- Preloader -->
-      <!-- Page Up -->
-      <a id="page-up" class="page-up-box"><i class="fas fa-arrow-alt-circle-up"></i></a>
-      <!-- Page Up -->
-      <!-- Color Switcher -->
-      <!-- <div class="switch-button"><i class="fas fa-cog fa-spin"></i></div>
-      <div class="switched-styles">
-         <h4>Color Switcher</h4>
-         <ul class="list-unstyled">
-             <li class="theme-default" data-color="orange"></li>
-             <li class="theme-pink" data-color="pink"></li>
-             <li class="theme-gold" data-color="gold"></li>
-             <li class="theme-green" data-color="green"></li>
-             <li class="theme-light-blue" data-color="light-blue"></li>
-             <li class="theme-blue" data-color="blue"></li>
-             <li class="theme-purble" data-color="purble"></li>
-             <li class="theme-rose" data-color="rose"></li>
-         </ul>
-         <div class="hide-button">×</div>
-     </div> -->
-     <!-- Color Switcher -->
-     <!-- Javascript -->
-      <script src="{{asset('assets/js/jquery.min.js')}}"></script>
-      <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-      <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
-      <script src="{{asset('assets/js/wow.min.js')}}"></script>
-      <script src="{{asset('assets/js/jquery.cookie.min.js')}}"></script>
-      <script src="{{asset('/assets/js/custom.js')}}"></script>
-      <script>
+
+      @endsection
+<script>
       //    function makeTimer() {
       //      //      var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");
       //      var endTime = new Date("31 December 2020 9:56:00 GMT+01:00");
