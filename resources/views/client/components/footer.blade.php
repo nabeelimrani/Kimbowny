@@ -53,11 +53,9 @@
                         </div>
                         <div class="footer-content">
                            <ul>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/dog-food.html"><i class="fas fa-paw"></i> Dogs Food</a></li>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/cart.html"><i class="fas fa-paw"></i> Cats Food</a></li>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/fish-food.html"><i class="fas fa-paw"></i> Fish Food</a></li>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/small-pet-food.html"><i class="fas fa-paw"></i> Small pets Food</a></li>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/bird-food.html"><i class="fas fa-paw"></i> Birds Food</a></li>
+                             @foreach(\App\Models\Category::all() as $category)
+                              <li><a href="{{$category->pagelink()}}"><i class="fas fa-paw"></i>{{$category->name}}</a></li>
+                               @endforeach
                            </ul>
                         </div>
                      </div>
@@ -69,12 +67,10 @@
                         </div>
                         <div class="footer-content">
                            <ul>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/login.html"><i class="fas fa-paw"></i> My account</a></li>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/cart.html"><i class="fas fa-paw"></i> My bag</a></li>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/wishlist.html"><i class="fas fa-paw"></i> Wishlist</a></li>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/privacy-policy.html"><i class="fas fa-paw"></i> Privacy Policy</a></li>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/return-refund.html"><i class="fas fa-paw"></i> Returns and Refunds</a></li>
-                              <li><a href="https://theme.bitrixinfotech.com/pet-shop/demo1/contact.html"><i class="fas fa-paw"></i> Help and Contact Us</a></li>
+                              <li><a href="{{route('userAccount')}}"><i class="fas fa-paw"></i> My account</a></li>
+                             <li><a href="{{route('wishlist')}}"><i class="fas fa-paw"></i> Wishlist</a></li>
+                              <li><a href="{{route('privacy')}}"><i class="fas fa-paw"></i> Privacy Policy</a></li>
+                              <li><a href="{{route('contact')}}"><i class="fas fa-paw"></i> Help and Contact Us</a></li>
                            </ul>
                         </div>
                      </div>
@@ -101,7 +97,7 @@
                <div class="row">
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                      <div class="copyright-box">
-                        <p>Copyright © 2024 KimBowny. All rights reserved</p>
+                        <p>Copyright © 2024 <a href="//www.rezvetech.com" target="_blank">RezveTech</a>. All rights reserved</p>
                      </div>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">

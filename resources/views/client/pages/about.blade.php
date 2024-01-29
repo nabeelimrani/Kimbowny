@@ -89,8 +89,8 @@ Thank you for the warm welcome! I am thrilled to join the esteemed Kimbowny Fami
                            <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/shipping_compact.png" alt="">
                         </div>
                         <div class="service-content">
-                           <h3 class="theme-title">Free Shipping & Return</h3>
-                           <p class="theme-description">We know when you need it, so we send it directly to your pet free of charge. Now you can spend your Sunday watching Netflix, not in the pet food aisle.</p>
+                           <h3 class="theme-title">Free Shipping Over AED 100</h3>
+                           <p class="theme-description">We know when you need it,If the product is above AED 100 you will get free shipping. Now you can spend your Sunday watching Netflix, not in the pet food aisle.</p>
                         </div>
                      </div>
                   </div>

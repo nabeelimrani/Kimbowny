@@ -8,11 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $guarded=[];
-
-    public static function find(mixed $pid)
-    {
-    }
-
     use HasFactory;
     public function brand()
     {
@@ -26,6 +21,18 @@ class Product extends Model
     {
         return $this->belongsTo(Pet::class);
     }
+    public function orders()
+    {
+      return $this->belongsToMany(Order::class);
+    }
+  public function colors()
+  {
+    return $this->belongsToMany(Color::class,"color_product");
+  }
+  public function sizes()
+  {
+    return $this->belongsToMany(Size::class,"product_size");
+  }
       public function category()
     {
         return $this->belongsTo(Category::class);
@@ -38,8 +45,10 @@ class Product extends Model
     {
         return $this->hasMany(Rating::class);
     }
-    public  function pagelink()
-    {
-      return "product/".str_replace(' ','-',$this->name);
-    }
+  public function pagelink()
+  {
+
+    return "product/" . strtolower(str_replace(' ', '-', $this->name));
+  }
+
 }

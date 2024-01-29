@@ -20,7 +20,13 @@ return new class extends Migration
             $table->string('password');
             $table->string('referral_code')->unique()->nullable();
             $table->boolean('reward_received')->default(false);
+            $table->boolean('made_purchase')->default(false);
             $table->unsignedBigInteger('referred_by')->nullable();
+            $table->text("address")->nullable();
+            $table->text("area")->nullable();
+            $table->text("city")->nullable();
+            $table->text("country")->nullable();
+            $table->string("phone")->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

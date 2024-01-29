@@ -2,7 +2,7 @@
  * Template Name : Pet shop Ecommerce HTML Template
  * Version : 1.0.0
  * Created by : Pet shop Ecommerce HTML Template
- * File: Custom JS 
+ * File: Custom JS
  */
 
 /*
@@ -301,25 +301,32 @@ $(document).ready(function () {
 
   function Guantity($root) {
     const element = $root;
-    const quantity = $root.first("data-quantity");
+    const quantity = $root.find("[data-quantity]");
     const quantity_target = $root.find("[data-quantity-target]");
     const quantity_minus = $root.find("[data-quantity-minus]");
     const quantity_plus = $root.find("[data-quantity-plus]");
     var quantity_ = quantity_target.val();
+
     $(quantity_minus).click(function () {
-      quantity_target.val(--quantity_);
+      // Check if the quantity is greater than 0 before decrementing
+      if (quantity_ > 1) {
+        quantity_target.val(--quantity_);
+      }
     });
+
     $(quantity_plus).click(function () {
       quantity_target.val(++quantity_);
     });
   }
+
   $.fn.Guantity = jQueryPlugin("Guantity", Guantity);
   $("[data-quantity]").Guantity();
+
 })();
 /* Preloader Js */
-$(window).on('load', function () { // makes sure the whole site is loaded 
-  // $('.theme-preloader').fadeOut(); // will first fade out the loading animation 
-  $('.theme-preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+$(window).on('load', function () { // makes sure the whole site is loaded
+  // $('.theme-preloader').fadeOut(); // will first fade out the loading animation
+  $('.theme-preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
   $('body').delay(350).css({
     'overflow': 'visible'
   });

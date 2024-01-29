@@ -50,9 +50,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'firstname' => ['required', 'string'],
+            'lastname' => ['required', 'string'  ],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'referrelCode'=>['nullable','string'],
         ]);
     }
 
@@ -63,12 +65,16 @@ class RegisterController extends Controller
      * @return \App\Models\User
      */
 
-    protected function create(array $data)
+    protected function create(array $data,$check)
     {
+
         return User::create([
-            'name' => $data['name'],
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'referred_by'=>$check?$check->id:null,
+            'referral_code'=>$this->generateUniqueReferralCode(),
         ]);
     }
 }

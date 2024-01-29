@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-   
+
 <!-- Mirrored from theme.bitrixinfotech.com/pet-shop/demo1/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Jan 2024 06:51:30 GMT -->
 <head>
       <!-- Required meta tags -->
@@ -36,12 +36,15 @@
               <h2 class="page-title">Oops! That page can’t be found.</h2>
               <p class="sub-title">THE PAGE YOU ARE LOOKING FOR DOES NOT EXITS</p>
               <p class="sub-link ">Please return to <h3><a href="{{url('/')}}" class="text-warning">Home page</a></h3></p>
-              
+
               <div class="search">
-                <form class="wg-search-form" action="{{url('/')}}">
+                <form class="wg-search-form" action="{{route('search')}}">
                   <div class="theme-input-box">
-                     <input class="form-control" type="text" name="search" placeholder="Search...">
-                     <button class="page-serach-btn"><i class="fas fa-search"></i></button>
+
+                      <input class="form-control" type="text" name="query" placeholder="Search our store">
+                      <button type="submit" class="widget-search-btn"><i class="fas fa-search"></i></button>
+
+
                   </div>
                 </form>
               </div>

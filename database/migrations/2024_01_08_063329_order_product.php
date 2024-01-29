@@ -19,6 +19,8 @@ return new class extends Migration
        $table->integer("sale");
        $table->integer("purchase");
        $table->integer("total");
+       $table->string("item_color")->nullable();
+       $table->string("item_size")->nullable();
      });
     }
 

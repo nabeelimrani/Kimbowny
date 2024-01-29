@@ -9,4 +9,8 @@ class Order extends Model
 {
     protected $guarded=[];
     use HasFactory;
+  public function products()
+  {
+    return $this->belongsToMany(Product::class);
+  }
 }

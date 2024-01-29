@@ -13,7 +13,7 @@ class PetSeeder extends Seeder
     public function run(): void
     {
         $pets = [
-    'Dog', 'Cat', 'Hamster', 'Turtle', 'Rabbit', 'Parrot', 'Fish', 'Guinea Pig', 'Lizard', 'Snake'
+    'Dog', 'Cat', 'bird', 'fishes'
     ];
     foreach ($pets as $key => $pet) {
         Pet::create(["name"=>$pet,"image"=>"assets/images/pet2.png"]);

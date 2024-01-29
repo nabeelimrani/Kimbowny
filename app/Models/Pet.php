@@ -13,4 +13,8 @@ class Pet extends Model
     {
         return $this->hasMany(Product::class);
     }
+  public function pagelink()
+  {
+    return "pet/" . strtolower(str_replace(' ', '-', $this->name));
+  }
 }

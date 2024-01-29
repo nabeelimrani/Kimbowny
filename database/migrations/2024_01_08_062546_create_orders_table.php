@@ -21,6 +21,7 @@ return new class extends Migration
             $table->boolean("status")->default(0);
             $table->text("note")->nullable();
             $table->string("courier_no")->nullable();
+
             $table->string("courier_company_name")->nullable();
             $table->string("courier_link")->nullable();
             $table->timestamps();

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->foreignId("category_id");
             $table->boolean("feature")->default(0);
             $table->string("photo");
+            $table->string("discount")->nullable();
             $table->timestamps();
         });
     }

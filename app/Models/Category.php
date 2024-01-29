@@ -13,4 +13,9 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+  public function pagelink()
+  {
+
+    return "category/" . strtolower(str_replace(' ', '-', $this->name));
+  }
 }

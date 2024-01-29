@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Brand;
+use App\Models\Category;
+use App\Models\Pet;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -18,7 +21,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/userAccount';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
@@ -40,6 +43,18 @@ class RouteServiceProvider extends ServiceProvider
       Route::bind('product', function (string $value) {
         $name=str_replace('-', ' ', $value);
         return Product::where('name', $name)->firstOrFail();
+      });
+      Route::bind('category', function (string $value) {
+        $name=str_replace('-', ' ', $value);
+        return Category::where('name', $name)->firstOrFail();
+      });
+      Route::bind('brand', function (string $value) {
+        $name=str_replace('-', ' ', $value);
+        return Brand::where('name', $name)->firstOrFail();
+      });
+      Route::bind('pet', function (string $value) {
+        $name=str_replace('-', ' ', $value);
+        return Pet::where('name', $name)->firstOrFail();
       });
     }
 }

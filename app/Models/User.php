@@ -38,7 +38,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
+    public  function getFullnameAttribute(){
+      return $this->firstname." ".$this->lastname;
+    }
     public function referrals()
     {
         return $this->hasMany(User::class, 'referred_by');
