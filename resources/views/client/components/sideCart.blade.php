@@ -12,7 +12,7 @@
                </ul>
             </div>
             <div class="slide-content-footer text-center">
-               <h3 class="theme-title">Subtotal: $<span id="totalprice">00.00</span></h3>
+               <h3 class="theme-title">Subtotal: AED : <span id="totalprice">00.00</span></h3>
                <ul>
                   <li><a href="{{url('/cart')}}" class="theme-btn">View Cart</a></li>
                   <li><a href="{{url('/checkout')}}" class="theme-btn">Checkout</a></li>

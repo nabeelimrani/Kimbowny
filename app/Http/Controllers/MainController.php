@@ -90,12 +90,57 @@ class MainController extends Controller
     }
     return redirect()->back()->with('success', "Comment has been added");
   }
+  public function check_payment()
+  {
+
+    $endpoint_secret = env('SW_SECRET');
+
+    $payload = @file_get_contents('php://input');
+    $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
+    $event = null;
+
+    try {
+      $event = \Stripe\Webhook::constructEvent($payload, $sig_header, $endpoint_secret);
+    } catch (\UnexpectedValueException $e) {
+
+      info('UnexpectedValueException: ' . $e->getMessage());
+      return response('', 400);
+    } catch (\Stripe\Exception\SignatureVerificationException $e) {
+
+      info('SignatureVerificationException: ' . $e->getMessage());
+      return response('', 400);
+    }
+
+
+    switch ($event->type) {
+      case 'checkout.session.completed':
+        $session = $event->data->object;
+
+        $order = Order::where('p_id', $session->id)->first();
+        if ($order && $order->_status === 'pending') {
+          $order->_status = 'paid';
+          $order->save();
+
+        }
+        break;
+
+
+      default:
+
+        info('Received unknown event type: ' . $event->type);
+    }
+
+    return response('');
+  }
 
   public function wishlist(){
     $products=auth()->user()->wishlist;
     return view("client.pages.wishlist",compact("products"));
   }
-
+  public function success_ur(Request $request)
+  {
+    return $this->updateSuccess_ur($request);
+  }
   public function userAccount()
 
   {
@@ -177,6 +222,17 @@ public function brandPage(Brand $brand)
   {
     session()->forget('cart');
     return 1;
+  }
+  public function cancel_ur()
+  {
+    $oid=session()->get('oid');
+    if($oid)
+    {
+      $order=Order::find($oid);
+      $order->products()->detach();
+      $order->delete();
+    }
+    return view("client.pages.cancel");
   }
   public function removeItem()
   {

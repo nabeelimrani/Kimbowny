@@ -30,7 +30,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/success', [App\Http\Controllers\MainController::class, 'success_s'])->name('success');
-Route::get('/cancel', [App\Http\Controllers\MainController::class, 'cancel-s'])->name('cancel');
+Route::get('/cancel', [App\Http\Controllers\MainController::class, 'cancel_ur'])->name('cancel');
 Route::controller(\App\Http\Controllers\HomeController::class)->group(function (){
   Route::post("/updateCrediantials",'updatePassword')->name('updateCrediantials');
   Route::post("/updateinfo",'updateinfo')->name('updateinfo');
@@ -49,6 +49,9 @@ Route::get('/contact','contact')->name('contact');
 Route::get('/about','about')->name('about');
 Route::get('/cart','cart')->name('cart');
 Route::get('/checkout','checkout')->name('checkout');
+Route::get('/success-ur','success_ur')->name('success-ur');
+Route::get('/cancel-ur','cancel_ur')->name('cancel-ur');
+Route::get('/failure-ur','cancel_ur')->name('failure-ur');
 Route::get('/privacy-Policy','privacy')->name('privacy');
 Route::get('/fAQ','faq')->name('faq');
 Route::get('/product/{product}','productPage')->name('product');
@@ -60,6 +63,7 @@ Route::get("/wishlist",'wishlist')->name('wishlist')->middleware('auth');
 Route::post("/addrating",'addrating')->name('addrating')->middleware('auth');
 
 Route::post("/clearCart",'clearCart')->name("clearCart");
+Route::post("/check_payment",'check_payment')->name("check_payment");
 Route::post("/addToCart",'addToCart')->name("addToCart");
 Route::post("/loadCart",'loadCart')->name("loadCart");
 Route::post("/loadWishlist",'loadWishlist')->name("loadWishlist");

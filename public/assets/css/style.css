@@ -2,7 +2,7 @@
 * Template Name : Pet shop Ecommerce HTML Template
 * Version : 1.0.0
 * Created by : Pet shop Ecommerce HTML Template
-* File: Main Css 
+* File: Main Css
 */
 
 /*
@@ -233,14 +233,14 @@ a{
     opacity: 1;
     visibility: visible;
 }
-.modal-header, 
+.modal-header,
 .remove-popup .modal-content {
     position: relative;
 }
 .modal-content .modal-body {
     padding: 25px 30px 15px;
 }
-.modal-header .close, 
+.modal-header .close,
 .modal-content .close {
     outline: none !important;
     color: #B5B5C3;
@@ -261,7 +261,7 @@ a{
     -o-transform: translateY(-50%); /* Opera */
     right: 15px;
 }
-.modal-header .close > i, 
+.modal-header .close > i,
 .modal-content .close > i {
     -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
     transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
@@ -274,9 +274,9 @@ a{
     top: 25px;
     right: 20px;
 }
-.modal-header .close:hover, 
-.modal-header .close > i:hover, 
-.modal-content .close:hover, 
+.modal-header .close:hover,
+.modal-header .close > i:hover,
+.modal-content .close:hover,
 .modal-content .close > i:hover {
     color: #f7941d !important;
 }
@@ -427,7 +427,7 @@ span.theme-logo {
     padding: 12px 12px;
     transition: all 0.5s;
 }
-.header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-dropdown > li > a.active, 
+.header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-dropdown > li > a.active,
 .header-main-menu .bg-light .navbar-collapse .navbar-nav > .nav-item > .nav-dropdown > li > a:hover {
     background: #eaeaea;
     color: #222;
@@ -1428,7 +1428,7 @@ span.theme-logo {
     font-family: 'Signika', sans-serif;
     font-weight: 600;
 }
-.comment-form-body input, 
+.comment-form-body input,
 .comment-form-body textarea {
     width: 100%;
     border: 1px solid #eee;
@@ -1545,7 +1545,7 @@ span.theme-logo {
 .wishlist-active {
     position: relative;
 }
-.slide-active::before, 
+.slide-active::before,
 .wishlist-active::before {
     content: "";
     background-color: #fff;
@@ -1602,7 +1602,7 @@ span.theme-logo {
     font-size: 22px;
     position: absolute;
     top: 50%;
-     transform: translateY(-50%); 
+     transform: translateY(-50%);
      -webkit-transform: translateY(-50%); /* Safari & Chrome */
     -moz-transform: translateY(-50%); /* Firefox */
     -ms-transform: translateY(-50%); /* Internet Explorer */
@@ -2985,7 +2985,7 @@ span.theme-logo {
     color: #fff;
 }
 .social-media-box > .social-icon > li > a:hover > i{
-    color: #fff;   
+    color: #fff;
 }
 .social-media-box > .social-icon > li > a > i {
     position: static;
@@ -3028,3 +3028,130 @@ span.theme-logo {
     }
 }
 /* keyframe css */
+.whatsapp-button {
+  position: fixed;
+  bottom: 80px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  background-color: #25d366; /* WhatsApp green color */
+  color: #fff;
+  font-size: 16px; /* Set the smaller size */
+  width: 40px; /* Set the smaller width */
+  height: 40px; /* Set the smaller height */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px; /* Set the smaller line height */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999; /* Ensure it's above other content */
+  transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.whatsapp-button:hover {
+  font-size: 24px; /* Enlarge the font size on hover */
+  width: 60px; /* Enlarge the width on hover */
+  height: 60px; /* Enlarge the height on hover */
+  line-height: 60px; /* Enlarge the line height on hover */
+  background-color: #128C7E; /* Darker WhatsApp green color on hover */
+}
+.ratt {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: row-reverse;
+  height: 150px;
+  position: relative;
+}
+
+.ratt-0 {
+  filter: grayscale(100%);
+}
+
+.ratt > input {
+  display: none;
+}
+
+.ratt > label {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-top: auto;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23e3e3e3' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 76%;
+  transition: .3s;
+}
+
+.ratt > input:checked ~ label,
+.ratt > input:checked ~ label ~ label {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23fcd93a' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+}
+
+
+.ratt > input:not(:checked) ~ label:hover,
+.ratt > input:not(:checked) ~ label:hover ~ label {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23d8b11e' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+}
+
+.emoji-wrapper {
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emoji-wrapper:before,
+.emoji-wrapper:after{
+  content: "";
+  height: 15px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.emoji-wrapper:before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 35%,rgba(255,255,255,0) 100%);
+}
+
+.emoji-wrapper:after{
+  bottom: 0;
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 35%,rgba(255,255,255,0) 100%);
+}
+
+.emoji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: .3s;
+}
+
+.emoji > svg {
+  margin: 15px 0;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+#ratt-1:checked ~ .emoji-wrapper > .emoji { transform: translateY(-100px); }
+#ratt-2:checked ~ .emoji-wrapper > .emoji { transform: translateY(-200px); }
+#ratt-3:checked ~ .emoji-wrapper > .emoji { transform: translateY(-300px); }
+#ratt-4:checked ~ .emoji-wrapper > .emoji { transform: translateY(-400px); }
+#ratt-5:checked ~ .emoji-wrapper > .emoji { transform: translateY(-500px); }
+
+.feedback {
+  max-width: 360px;
+  background-color: #fff;
+  width: 100%;
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+}

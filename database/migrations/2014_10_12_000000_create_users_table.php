@@ -25,7 +25,8 @@ return new class extends Migration
             $table->text("address")->nullable();
             $table->text("area")->nullable();
             $table->text("city")->nullable();
-            $table->text("country")->nullable();
+            $table->string("country")->nullable();
+            $table->string("zipcode")->nullable();
             $table->string("phone")->nullable();
             $table->rememberToken();
             $table->timestamps();

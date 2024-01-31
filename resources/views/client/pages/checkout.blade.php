@@ -146,6 +146,15 @@
                 </div>
                 <div class="col-md-6">
                   <div class="theme-input-box">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" class="form-control" value="{{authfilter('zipcode')}}" name="zipcode" placeholder="Zip Code">
+                    @error("zcode")
+                    <span class="text-danger">{{$message}}</span>
+                    @enderror
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="theme-input-box">
                     <label for="order">Order Note</label>
 
                     <textarea class="form-control" name="ordernote" id="order" cols="20"
@@ -205,14 +214,17 @@
                           </div>
                           <div class="theme-input-box">
                             <button class="theme-btn">Login</button>
+
+                              @if (Route::has('password.request'))
+                          <a  href="{{ route('password.request') }}" style="text-decoration: none!important;background: none !important;
+                          margin: 0px !important
+                          ">
+                                  {{ __('Forgot Your Password?') }}
+                                </a>
+                              @endif
+
                           </div>
-                          <p class="signup">
-                            @if (Route::has('password.request'))
-                              <a  href="{{ route('password.request') }}">
-                                {{ __('Forgot Your Password?') }}
-                              </a>
-                            @endif
-                          </p>
+
                         </form>
                       </div>
                     </div>

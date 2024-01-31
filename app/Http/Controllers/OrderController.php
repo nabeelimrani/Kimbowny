@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Coupon;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
@@ -26,6 +27,7 @@ class OrderController extends Controller
         "lastname"=>"required",
         "address"=>"required",
         "area"=>"required",
+        "zipcode"=>"required",
         "phone"=>"required",
         "country"=>"required",
         'pcode' => [
@@ -55,6 +57,7 @@ class OrderController extends Controller
             "country"=>$request->country,
             "city"=>$request->city,
             "email"=>$request->email,
+            "zipcode"=>$request->zipcode,
             "phone"=>$request->phone,
             "password"=>Hash::make($request->pass),
           ]);
@@ -66,6 +69,7 @@ class OrderController extends Controller
            "lastname"=>$request->lastname,
            "address"=>$request->address,
            "area"=>$request->area,
+           "zipcode"=>$request->zipcode,
            "country"=>$request->country,
            "city"=>$request->city,
            "phone"=>$request->phone,
@@ -75,10 +79,16 @@ class OrderController extends Controller
 
 
       $note=$request->note;
-      $order=Order::create(["user_id"=>$user->id,"note"=>$note]);
+      $discount=optional(Coupon::where('code',$request->pcode)->first())->discount??null;
+      $order=Order::create(["user_id"=>$user->id,"note"=>$note,"discount"=>$discount]);
+      session()->put('oid',$order->id);
       if($request->payment_method=="stripe") {
 
         return $this->StripePayment($order, $user);
+      }
+      else
+      {
+        return $this->tabbypayment($order,$user);
       }
 
     }
