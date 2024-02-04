@@ -1,35 +1,7 @@
 @extends("layouts.app")
 @section("content")
 
-  <style>
-    /* CSS */
-    .copyable-link-container {
-      display: flex;
-      align-items: center;
-    }
 
-    .copyable-link-input {
-      flex: 1;
-      margin-right: 8px; /* Adjust margin as needed */
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-
-    .copy-link-button {
-      padding: 4px 9px;
-      background-color: #f89f44;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-
-
-  </style>
          <!-- Bradcrumb -->
          <section class="bradcrumb-area page-background">
             <div class="container">
@@ -118,7 +90,7 @@
                                  <h4>Reward Earned</h4>
                                  <img class="bg-light" width="40" src="{{asset('reward.png')}}" alt="">
                                </div>
-                               <span class="my-2">Total Earned AED : @php auth()->user()->referrals()->where("made_purchase",1)->count()*30 .".00"@endphp </span>
+                               <span class="my-2">Total Earned AED : @php auth()->user()->referrals()->where("made_purchase",1)->count()*10 .".00"@endphp </span>
                              </div>
                            </div>
                            </div>
@@ -134,11 +106,23 @@
                                <th>Fullfilment Status</th>
                                <th>#Tracking no</th>
                                <th>Company Link</th>
-                               <th>Order Details</th>
+                               <th>Discount</th>
+{{--                               <th>Order Details</th>--}}
                                <th>Total Amount</th>
                              </tr></thead>
                              <tbody>
-
+                              @foreach($orders as $index=>$order)
+                                <tr>
+                                  <td>{{$index+1}}</td>
+                                  <td>{{$order->created_at->format('j F Y')}}</td>
+                                  <td>{{$order->_status}}</td>
+                                  <td>{{$order->status==0?'Pending':'Confirmed'}}</td>
+                                  <td>{{$order->courier_no??'Pending'}}</td>
+                                  <td><a href="{{$order->courier_link??'#'}}" >{{$order->courier_company_name??'Pending'}}</a></td>
+                                  <td>{{$order->discount??'NO DISCOUNT'}}</td>
+                                  <td>AED : {{$order->bill}}</td>
+                                </tr>
+                              @endforeach
                              </tbody>
                            </table>
                            </div>

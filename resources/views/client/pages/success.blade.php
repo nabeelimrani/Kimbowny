@@ -32,12 +32,11 @@
 
                            <div class="order-details">
                              <h2 class="mb-3">Order Details</h2>
-
                              <ul>
                                @if($order)
                                  <li class="my-2"><strong>Date:</strong> {{$order->created_at->format('j F Y')}}</li>
                                  <li class="my-2"><strong>Total Amount:</strong> AED :
-                                   {{$order->bill}}
+                                   {{$order->bill}}.00
                                  </li>
                                  <!-- Add more details such as shipping address, items purchased, etc. -->
                                @endif

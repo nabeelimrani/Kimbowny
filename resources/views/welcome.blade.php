@@ -1,6 +1,7 @@
 @extends("layouts.app")
 @section("content")
       <!-- Slider -->
+
     @include("client.components.slider")
          <!-- Our Service -->
          <section class="our-service-area">
@@ -10,7 +11,7 @@
                   <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
                      <div class="category-week-box text-center">
                         <div class="category-week-img">
-                           <a href="{{url($category->pagelink())}}"><img src="{{asset($category->image)}}" alt="no image found"></a>
+                           <a href="{{url($category->pagelink())}}"><img src="{{asset('storage/category_images/'.$category->image)}}" alt="no image found"></a>
                         </div>
                         <h3 class="theme-title"><a href="#">{{$category->name}}</a></h3>
                      </div>
@@ -27,34 +28,39 @@
                   <div class="col-xl-6 col-lg-6 col-md-12 col-sm-6 col-12">
                      <div class="furry-friend-box">
                         <div class="furry-friend-img">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/pet2.png" alt="">
+                           <img src="{{asset('assets/dog.png')}}" alt="">
                         </div>
                         <div class="furry-friend-content">
                            <div class="furry-top-title">
-                              <h3 class="theme-title">About Our In-house Staffs</h3>
+                              <h3 class="theme-title">Top Reasons to Select Our Pet Shop's Products and Supplies</h3>
                               <div class="furry-line">
                                  <img src="{{asset('furry-line.png')}}" alt="">
                               </div>
-                              <p class="theme-description">all well trained and certified</p>
+
                            </div>
-                           <p class="theme-description">We have qualified well-trained in house staff who regularly check the quality of food. Once it approved, then it will be served to your pet.</p>
+                           <p class="theme-description">Our pet shop provides quality products and supplies to meet pets' needs.
+                             We carefully select each product to ensure safety, durability, and effectiveness
+                             .We offer premium pet food, accessories, and grooming supplies to keep pets healthy and happy.</p>
                         </div>
                      </div>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-12 col-sm-6 col-12">
                      <div class="furry-friend-box">
                         <div class="furry-friend-img">
-                           <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/pet4.png" alt="">
+                           <img src="{{asset('assets/cat.jpeg')}}" alt="">
                         </div>
                         <div class="furry-friend-content">
                            <div class="furry-top-title">
-                              <h3 class="theme-title">Our Simple Process</h3>
+                              <h3 class="theme-title">Efficient Order Delivery Process</h3>
                               <div class="furry-line">
                                  <img src="{{asset('furry-line.png')}}" alt="">
                               </div>
-                              <p class="theme-description">adopt, buy, get trained with these steps</p>
+
                            </div>
-                           <p class="theme-description">Our food is made from fresh and raw ingredients. It is prepared using a gentle process called dehydration, which keeps the nutrients in place without the need for harsh cooking.</p>
+                           <p class="theme-description">The company prides itself on its efficient order delivery process,
+                             which involves a rigorous process to ensure quick and accurate processing of orders.
+
+                             The efficient order delivery process is an important part of the company's commitment to customer satisfaction.</p>
                         </div>
                      </div>
                   </div>
@@ -128,26 +134,26 @@
          </section>
          <!-- Pet Product -->
          <!-- Pet Shop Shopping -->
-         <section class="pet-shop-shopping-area">
-            <div class="pet-shop-shopping-main">
-               <div class="pet-shop-shopping-box pet-shop-bg">
-               </div>
-               <div class="pet-shop-shopping-box text-center">
-                  <div class="pet-shop-shopping-content">
-                     <div class="pet-sale-box">
-                        <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/sell-img.png" alt="">
-                     </div>
-                     <div class="page-title text-center">
-                        <h2>Shopping Made Easy.</h2>
-                        <p>Now your pet doesn’t have to wait anymore for its favorite food. This time, treat them very special by buying your pet's lovable food with the best deal available.</p>
-                     </div>
-                     <div class="pet-sale-btn">
-                        <a href="#" class="theme-btn">Shop Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+{{--         <section class="pet-shop-shopping-area">--}}
+{{--            <div class="pet-shop-shopping-main">--}}
+{{--               <div class="pet-shop-shopping-box pet-shop-bg">--}}
+{{--               </div>--}}
+{{--               <div class="pet-shop-shopping-box text-center">--}}
+{{--                  <div class="pet-shop-shopping-content">--}}
+{{--                     <div class="pet-sale-box">--}}
+{{--                        <img src="https://theme.bitrixinfotech.com/pet-shop/demo1/assets/images/sell-img.png" alt="">--}}
+{{--                     </div>--}}
+{{--                     <div class="page-title text-center">--}}
+{{--                        <h2>Shopping Made Easy.</h2>--}}
+{{--                        <p>Now your pet doesn’t have to wait anymore for its favorite food. This time, treat them very special by buying your pet's lovable food with the best deal available.</p>--}}
+{{--                     </div>--}}
+{{--                     <div class="pet-sale-btn">--}}
+{{--                        <a href="#" class="theme-btn">Shop Now</a>--}}
+{{--                     </div>--}}
+{{--                  </div>--}}
+{{--               </div>--}}
+{{--            </div>--}}
+{{--         </section>--}}
          <!-- Pet Shop Shopping -->
          <!-- Featured Product -->
          <section class="featured-product-area page-paddings">

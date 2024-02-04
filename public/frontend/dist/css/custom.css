@@ -1,0 +1,33 @@
+.btn-submit {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.form-control {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+input[type="text"]::placeholder{
+    color:#999999e8;
+}
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}

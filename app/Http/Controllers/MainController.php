@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Order;
@@ -17,6 +18,19 @@ class MainController extends Controller
 {
   public function success_s(Request $request)
   {
+    $user=auth()->user();
+    if (!$user)
+    {
+      throw new NotFoundHttpException();
+    }
+    if($user->referredBy && $user->made_purchase == 0)
+    {
+      $user->update(["made_purchase"=>1]);
+      $message="Your referral ".$user->fullname." made it's first purchase on kimbownypetstore.com the reward will be sent to You by Admin please contact us on whatsapp";
+      $header="Kimbownypetstore Reward Alert !!!";
+      sendEmail($user->referredBy->email,$header,$message);
+    }
+
     return $this->updateSuccess($request);
   }
   public function getcities()
@@ -139,13 +153,27 @@ class MainController extends Controller
   }
   public function success_ur(Request $request)
   {
+    $user=auth()->user();
+    if (!$user)
+    {
+      throw new NotFoundHttpException();
+    }
+    if($user->referredBy && $user->made_purchase == 0)
+    {
+      $user->update(["made_purchase"=>1]);
+      $message="Your referral ".$user->fullname." made it's first purchase on kimbownypetstore.com the reward will be sent to You by Admin please contact us on whatsapp";
+      $header="Kimbownypetstore Reward Alert";
+      sendEmail($user->referredBy->email,$header,$message);
+    }
     return $this->updateSuccess_ur($request);
   }
   public function userAccount()
 
   {
     $referrals=auth()->user()->referrals;
-    return view("client.pages.userAccount",compact("referrals"));
+    $orders=auth()->user()->orders;
+
+    return view("client.pages.userAccount",compact("referrals","orders"));
   }
   public function petPage(Pet $pet)
   {
@@ -391,7 +419,8 @@ public function brandPage(Brand $brand)
         $fproducts=Product::with("category","ratings")->where("feature",1)->get();
         $categories=Category::with("products.ratings")->get() ;
         $pets=Pet::with("products")->get();
-        return view("welcome",compact("categories","fproducts","pets"));
+        $banners=Banner::all();
+        return view("welcome",compact("categories","fproducts","pets","banners"));
     }
     public function faq()
     {
@@ -408,6 +437,7 @@ public function brandPage(Brand $brand)
       $totalPrice = 0;
       $fee = 0;
       $isSaudi = false;
+
       $products = collect();
       $user = auth()->user() ?? null;
       if ($user && $user->country == 'Saudi Arabia')

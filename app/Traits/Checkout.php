@@ -27,7 +27,13 @@ trait Checkout
 
         $discountedPrice = $product->sale - ($product->sale * ($order->discount / 100));
         $unit_amount = intval($discountedPrice * 100);
-      } else {
+      }
+      elseif ($user->made_purchase)
+      {
+        $discountedPrice = $product->sale - ($product->sale * (10 / 100));
+        $unit_amount = intval($discountedPrice * 100);
+      }
+      else {
 
         $unit_amount = intval($product->sale * 100);
       }
@@ -58,7 +64,10 @@ trait Checkout
     if ($order->discount) {
       $bill = $bill - ($bill * ($order->discount / 100));
     }
-
+    if($user->made_purchase == 0)
+    {
+      $bill = $bill - ($bill * (10 / 100));
+    }
     $checkout=\Stripe\Checkout\Session::create([
       'line_items' =>[$productItems],
       'mode'=>'payment',
@@ -103,7 +112,13 @@ trait Checkout
 
         $discountedPrice = $product->sale - ($product->sale * ($order->discount / 100));
         $unit_amount = intval($discountedPrice * 100);
-      } else {
+      }
+      elseif ($user->made_purchase)
+      {
+        $discountedPrice = $product->sale - ($product->sale * (10 / 100));
+        $unit_amount = intval($discountedPrice * 100);
+      }
+      else {
 
         $unit_amount = intval($product->sale * 100);
       }
@@ -128,6 +143,10 @@ trait Checkout
     }
     if ($order->discount) {
       $bill = $bill - ($bill * ($order->discount / 100));
+    }
+    if($user->made_purchase == 0)
+    {
+      $bill = $bill - ($bill * (10 / 100));
     }
     $order_data = [
       'amount'=> intval($bill),

@@ -24,7 +24,7 @@ class Controller extends BaseController
         $session = \Stripe\Checkout\Session::retrieve($sessionId);
 
         if (!$session) {
-          throw new NotFoundHttpException;
+          throw new NotFoundHttpException();
         }
 
         $order = Order::where('p_id', $session->id)->first();

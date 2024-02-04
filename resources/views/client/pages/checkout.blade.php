@@ -251,6 +251,12 @@
                         NOTE* Shipping fee is AED : 10.00  for products in UAE which are below AED:100.00
 
                       </li>
+
+                      <li style="color: #f89f44">
+                        <hr>
+                        You will Get 10% off if this is Your First Purchase
+
+                      </li>
                       <hr>
                       <li>{{$total}} items <span>AED : <span id="actualprice">{{$totalPrice}}</span></span></li>
                       @if($isSaudi)

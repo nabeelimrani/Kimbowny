@@ -10,6 +10,7 @@ use App\Traits\Checkout;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
 class OrderController extends Controller
@@ -48,7 +49,13 @@ class OrderController extends Controller
        if($request->pass && auth()->guest())
        {
 
+         $referralCode = Str::random($length);
 
+
+         while (User::where('referral_code', $referralCode)->exists()) {
+
+           $referralCode = Str::random($length);
+         }
           $user=User::create([
             "firstname"=>$request->firstname,
             "lastname"=>$request->lastname,
@@ -59,6 +66,7 @@ class OrderController extends Controller
             "email"=>$request->email,
             "zipcode"=>$request->zipcode,
             "phone"=>$request->phone,
+            "referral_code"=>$referralCode,
             "password"=>Hash::make($request->pass),
           ]);
          Auth::login($user);
@@ -76,6 +84,7 @@ class OrderController extends Controller
          ]);
          $user=auth()->user();
        }
+
 
 
       $note=$request->note;
