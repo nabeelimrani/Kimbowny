@@ -152,6 +152,29 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::get('/product/feature/update', [\App\Http\Controllers\AdminController::class, 'featureUpdateProduct'])->name('product.feature.update');
 
+        Route::get('/shape/index', [\App\Http\Controllers\AdminController::class, 'indexShape'])->name('shape.index');
+        Route::post('/shape/store', [\App\Http\Controllers\AdminController::class, 'storeShape'])->name('shape.store');
+        Route::get('/shape/show', [\App\Http\Controllers\AdminController::class, 'showShape'])->name('shape.show');
+        Route::post('/shape/del/{id}', [\App\Http\Controllers\AdminController::class, 'delShape'])->name('shape.del');
+        Route::post('/shape/edit/{id}', [\App\Http\Controllers\AdminController::class, 'editShape'])->name('shape.edit');
+
+        Route::get('/weight/index', [\App\Http\Controllers\AdminController::class, 'indexWeight'])->name('weight.index');
+        Route::post('/weight/store', [\App\Http\Controllers\AdminController::class, 'storeWeight'])->name('weight.store');
+        Route::get('/weight/show', [\App\Http\Controllers\AdminController::class, 'showWeight'])->name('weight.show');
+        Route::post('/weight/del/{id}', [\App\Http\Controllers\AdminController::class, 'delWeight'])->name('weight.del');
+        Route::post('/weight/edit/{id}', [\App\Http\Controllers\AdminController::class, 'editWeight'])->name('weight.edit');
+
+        Route::get('/flavor/index', [\App\Http\Controllers\AdminController::class, 'indexFlavor'])->name('flavor.index');
+        Route::post('/flavor/store', [\App\Http\Controllers\AdminController::class, 'storeFlavor'])->name('flavor.store');
+        Route::get('/flavor/show', [\App\Http\Controllers\AdminController::class, 'showFlavor'])->name('flavor.show');
+        Route::post('/flavor/del/{id}', [\App\Http\Controllers\AdminController::class, 'delFlavor'])->name('flavor.del');
+        Route::post('/flavor/edit/{id}', [\App\Http\Controllers\AdminController::class, 'editFlavor'])->name('flavor.edit');
+
+        Route::get('/pieces/index', [\App\Http\Controllers\AdminController::class, 'indexPieces'])->name('pieces.index');
+        Route::post('/pieces/store', [\App\Http\Controllers\AdminController::class, 'storePieces'])->name('pieces.store');
+        Route::get('/pieces/show', [\App\Http\Controllers\AdminController::class, 'showPieces'])->name('pieces.show');
+        Route::post('/pieces/del/{id}', [\App\Http\Controllers\AdminController::class, 'delPieces'])->name('pieces.del');
+        Route::post('/pieces/edit/{id}', [\App\Http\Controllers\AdminController::class, 'editPieces'])->name('pieces.edit');
         // Add more authenticated admin routes here
     });
 });

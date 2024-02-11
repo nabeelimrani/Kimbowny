@@ -150,6 +150,30 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a href="{{ route('admin.shape.index') }}"
+                                    class="nav-link {{ Route::is('admin.shape.index') ? 'active' : '' }} ">
+                                    <p>Add Shape</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.flavor.index') }}"
+                                    class="nav-link {{ Route::is('admin.flavor.index') ? 'active' : '' }} ">
+                                    <p>Add Flavor</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.pieces.index') }}"
+                                    class="nav-link {{ Route::is('admin.pieces.index') ? 'active' : '' }} ">
+                                    <p>Add Pieces</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.weight.index') }}"
+                                    class="nav-link {{ Route::is('admin.weight.index') ? 'active' : '' }} ">
+                                    <p>Add Weight</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{ route('admin.coupon.index') }}"
                                     class="nav-link {{ Route::is('admin.coupon.index') ? 'active' : '' }} ">
                                     <p>Add Coupon</p>
@@ -229,6 +253,30 @@
                                 <a href="{{ route('admin.color.show') }}"
                                     class="nav-link {{ Route::is('admin.color.show') ? 'active' : ' ' }}">
                                     <p>View Color</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.shape.show') }}"
+                                    class="nav-link {{ Route::is('admin.shape.show') ? 'active' : ' ' }}">
+                                    <p>View Shape</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.flavor.show') }}"
+                                    class="nav-link {{ Route::is('admin.flavor.show') ? 'active' : ' ' }}">
+                                    <p>View Flavor</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.pieces.show') }}"
+                                    class="nav-link {{ Route::is('admin.pieces.show') ? 'active' : ' ' }}">
+                                    <p>View Pieces</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.weight.show') }}"
+                                    class="nav-link {{ Route::is('admin.weight.show') ? 'active' : ' ' }}">
+                                    <p>View Weight</p>
                                 </a>
                             </li>
                             <li class="nav-item">

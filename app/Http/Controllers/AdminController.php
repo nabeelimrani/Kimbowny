@@ -9,11 +9,15 @@ use App\Models\Category;
 use App\Models\Color;
 use App\Models\Coupon;
 use App\Models\Faq;
+use App\Models\Flavor;
 use App\Models\Order;
 use App\Models\Pet;
+use App\Models\Pieces;
 use App\Models\Product;
+use App\Models\Shape;
 use App\Models\Size;
 use App\Models\User;
+use App\Models\Wegiht;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -843,73 +847,91 @@ class AdminController extends Controller
     {
         $pets = Pet::all();
         $categories = Category::all();
+        $color = Color::all();
+        $weight = Wegiht::all();
+        $size = Size::all();
+        $shape = Shape::all();
+        $pieces = Pieces::all();
+        $flavor = Flavor::all();
         return view('admin_side.product')
             ->with('categories', $categories)
+            ->with('color', $color)
+            ->with('pieces', $pieces)
+            ->with('weight', $weight)
+            ->with('size', $size)
+            ->with('shape', $shape)
+            ->with('flavor', $flavor)
             ->with('pets', $pets);
     }
     public function storeProduct(Request $request)
     {
 
-        $validation = $request->validate([
+        dd($request->all());
+
+        $request->validate([
             'productname' => 'required',
             'productdiscount' => 'required',
             'productquantity' => 'required',
             'productdescription' => 'required',
+            'pet' => 'required',
             'sale' => 'required',
             'purchase' => 'required',
-            'pet' => 'required',
             'feature' => 'required',
             'category' => 'required',
-            'productimage' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ], [
-            'productname.required' => 'The product name field is required.',
-            'productdiscount.required' => 'The product discount field is required.',
-            'productquantity.required' => 'The product quantity field is required.',
-            'productdescription.required' => 'The product description field is required.',
-            'sale.required' => 'The sale field is required.',
-            'purchase.required' => 'The purchase field is required.',
-            'pet.required' => 'Please select a pet for the product.',
-            'feature.required' => 'The feature field is required.',
-            'category.required' => 'Please select a category for the product.',
-            'productimage.required' => 'Please upload a product image.',
-            'productimage.mimes' => 'The product image must be a valid image file (jpeg, png, jpg, gif, svg).',
-            'productimage.max' => 'The product image must not exceed 2048 kilobytes.',
+            'productimage.*' => 'required',
         ]);
-
-        $imagePath = null;
-
-        if ($request->hasFile('productimage')) {
-            $image = $request->file('productimage');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-
-            $imagePath = $image->storeAs('product_images', $imageName, 'public');
-        }
 
         $product = new Product;
         $product->name = $request->productname;
         $product->description = $request->productdescription;
-        $product->photo = $imageName;
         $product->quantity = $request->productquantity;
         $product->discount = $request->productdiscount;
         $product->sale = $request->sale;
-        $product->brand_id = 0;
         $product->purchase = $request->purchase;
         $product->feature = $request->feature;
         $product->pet_id = $request->pet;
         $product->category_id = $request->category;
+
+        $product->brand_id = 0;
+
+        if ($request->hasFile('productimage')) {
+            $images = $request->file('productimage');
+            $imageNames = [];
+
+            foreach ($images as $image) {
+                $imageName = time() . '.' . $image->getClientOriginalExtension();
+                $image->storeAs('product_images', $imageName, 'public');
+                $imageNames[] = $imageName;
+            }
+
+            $product->photo = serialize($imageNames);
+
+        }
         $product->save();
-
         return redirect()->route('admin.product.index')->with('success', 'Product created successfully!');
-
     }
     public function showProduct()
     {
         $product = Product::orderBy('name', 'asc')->get();
         $pets = Pet::all();
         $categories = Category::all();
+        $color = Color::all();
+        $weight = Wegiht::all();
+        $size = Size::all();
+        $shape = Shape::all();
+        $pieces = Pieces::all();
+        $flavor = Flavor::all();
+        $categories = Category::all();
         return view('admin_side.productView')
             ->with('product', $product)
             ->with('categories', $categories)
+            ->with('categories', $categories)
+            ->with('color', $color)
+            ->with('pieces', $pieces)
+            ->with('weight', $weight)
+            ->with('size', $size)
+            ->with('shape', $shape)
+            ->with('flavor', $flavor)
             ->with('pets', $pets);
 
     }
@@ -937,7 +959,7 @@ class AdminController extends Controller
     }
     public function editProduct(Request $request, $id)
     {
-
+        dd($request->all());
         $product = Product::find($id);
 
         if (!$product) {
@@ -989,6 +1011,264 @@ class AdminController extends Controller
         }
 
         return response()->json(['error' => 'Product not found']);
+    }
+
+    //shape
+    public function indexShape()
+    {
+        return view('admin_side.shape');
+    }
+    public function storeShape(Request $request)
+    {
+
+        $validation = $request->validate([
+            'shapename' => 'required',
+
+        ], [
+            'shapename.required' => 'Please enter a shape name.',
+
+        ]);
+
+        $shape = new Shape;
+        $shape->name = $request->shapename;
+
+        $shape->save();
+
+        return redirect()->route('admin.shape.index')->with('success', 'Shape created successfully!');
+
+    }
+    public function showShape()
+    {
+        $shape = Shape::orderBy('name', 'asc')->get();
+        return view('admin_side.shapeView')
+            ->with('shape', $shape);
+    }
+    public function delShape($id)
+    {
+        $shape = Shape::find($id);
+
+        if (!$shape) {
+
+            return redirect()->route('admin.shape.show')
+                ->with('error', 'Shape not found');
+
+        }
+
+        $shape->delete();
+
+        return redirect()->route('admin.shape.show')->with('success', 'Shape deleted successfully');
+
+    }
+    public function editShape(Request $request, $id)
+    {
+
+        $shape = Shape::find($id);
+
+        if (!$shape) {
+            return redirect()->back()->with('error', 'Shape not found.');
+        }
+
+        $shape->name = $request->shapename;
+
+        $shape->save();
+
+        // Redirect back with success message
+
+        return redirect()->back()->with('success', 'Shape updated successfully.');
+
+    }
+
+    //weight
+    public function indexWeight()
+    {
+        return view('admin_side.weight');
+    }
+    public function storeWeight(Request $request)
+    {
+
+        $validation = $request->validate([
+            'weightname' => 'required',
+
+        ], [
+            'weightname.required' => 'Please enter a weight name.',
+
+        ]);
+
+        $weight = new Wegiht;
+        $weight->name = $request->weightname;
+
+        $weight->save();
+
+        return redirect()->route('admin.weight.index')->with('success', 'Weight created successfully!');
+
+    }
+    public function showWeight()
+    {
+        $weight = Wegiht::orderBy('name', 'asc')->get();
+        return view('admin_side.weightView')
+            ->with('weight', $weight);
+    }
+    public function delWeight($id)
+    {
+        $weight = Wegiht::find($id);
+
+        if (!$weight) {
+
+            return redirect()->route('admin.weight.show')
+                ->with('error', 'Weight not found');
+
+        }
+
+        $weight->delete();
+
+        return redirect()->route('admin.weight.show')->with('success', 'Weight deleted successfully');
+
+    }
+    public function editWeight(Request $request, $id)
+    {
+
+        $weight = Wegiht::find($id);
+
+        if (!$weight) {
+            return redirect()->back()->with('error', 'Weight not found.');
+        }
+
+        $weight->name = $request->weightname;
+
+        $weight->save();
+
+        // Redirect back with success message
+
+        return redirect()->back()->with('success', 'Weight updated successfully.');
+
+    }
+    //pieces
+    public function indexPieces()
+    {
+        return view('admin_side.pieces');
+    }
+    public function storePieces(Request $request)
+    {
+
+        $validation = $request->validate([
+            'piecesname' => 'required',
+
+        ], [
+            'piecesname.required' => 'Please enter a pieces name.',
+
+        ]);
+
+        $pieces = new Pieces;
+        $pieces->name = $request->piecesname;
+
+        $pieces->save();
+
+        return redirect()->route('admin.pieces.index')->with('success', 'Pieces created successfully!');
+
+    }
+    public function showPieces()
+    {
+        $pieces = Pieces::orderBy('name', 'asc')->get();
+        return view('admin_side.piecesView')
+            ->with('pieces', $pieces);
+    }
+    public function delPieces($id)
+    {
+        $pieces = Pieces::find($id);
+
+        if (!$pieces) {
+
+            return redirect()->route('admin.pieces.show')
+                ->with('error', 'Pieces not found');
+
+        }
+
+        $pieces->delete();
+
+        return redirect()->route('admin.pieces.show')->with('success', 'Pieces deleted successfully');
+
+    }
+    public function editPieces(Request $request, $id)
+    {
+
+        $pieces = Pieces::find($id);
+
+        if (!$pieces) {
+            return redirect()->back()->with('error', 'Pieces not found.');
+        }
+
+        $pieces->name = $request->piecesname;
+
+        $pieces->save();
+
+        // Redirect back with success message
+
+        return redirect()->back()->with('success', 'Pieces updated successfully.');
+
+    }
+    //flavor
+    public function indexFlavor()
+    {
+        return view('admin_side.flavor');
+    }
+    public function storeFlavor(Request $request)
+    {
+
+        $validation = $request->validate([
+            'flavorname' => 'required',
+
+        ], [
+            'flavorname.required' => 'Please enter a flavor name.',
+
+        ]);
+
+        $flavor = new Flavor;
+        $flavor->name = $request->flavorname;
+
+        $flavor->save();
+
+        return redirect()->route('admin.flavor.index')->with('success', 'Flavor created successfully!');
+
+    }
+    public function showFlavor()
+    {
+        $flavor = Flavor::orderBy('name', 'asc')->get();
+        return view('admin_side.flavorView')
+            ->with('flavor', $flavor);
+    }
+    public function delFlavor($id)
+    {
+        $flavor = Flavor::find($id);
+
+        if (!$flavor) {
+
+            return redirect()->route('admin.flavor.show')
+                ->with('error', 'Flavor not found');
+
+        }
+
+        $flavor->delete();
+
+        return redirect()->route('admin.flavor.show')->with('success', 'Flavor deleted successfully');
+
+    }
+    public function editFlavor(Request $request, $id)
+    {
+
+        $flavor = Flavor::find($id);
+
+        if (!$flavor) {
+            return redirect()->back()->with('error', 'Flavor not found.');
+        }
+
+        $flavor->name = $request->flavorname;
+
+        $flavor->save();
+
+        // Redirect back with success message
+
+        return redirect()->back()->with('success', 'Flavor updated successfully.');
+
     }
 
 }

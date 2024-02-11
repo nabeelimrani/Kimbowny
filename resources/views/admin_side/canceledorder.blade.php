@@ -130,7 +130,11 @@
 
                                                     <td class="text-center">
                                                         <div class="btn-group">
-
+                                                            <button class="btn btn-sm btn-outline-primary"
+                                                                data-toggle="modal"
+                                                                data-target="#detailModal{{ $canceledorderdata->id }}">
+                                                                <i class="fa fa-info-circle" style="font-size: 1.2em;"></i>
+                                                            </button>&nbsp;&nbsp;
                                                             <button class="btn btn-sm btn-outline-danger"
                                                                 data-toggle="modal"
                                                                 data-target="#deleteModal{{ $canceledorderdata->id }}">
@@ -167,6 +171,135 @@
                                                                     <button type="submit"
                                                                         class="btn btn-danger">Delete</button>
                                                                 </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Order Detail Modal -->
+                                                <div class="modal fade" id="detailModal{{ $canceledorderdata->id }}"
+                                                    tabindex="-1" role="dialog" aria-labelledby="detailAreaModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog modal-xl" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="detailAreaModalLabel"><i
+                                                                        class="fas fa-clipboard"></i>&nbsp;Order Detail</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="row">
+                                                                    <!-- Left side with 4 columns -->
+                                                                    <!-- Left side with 5 columns -->
+                                                                    <div class="col-md-4">
+                                                                        <div class="card" style="height:100%;">
+                                                                            <div class="card-header">
+                                                                                <h5 class="card-title"><i
+                                                                                        class="fas fa-user-circle"></i>
+                                                                                    Customer Detail</h5>
+                                                                            </div>
+
+                                                                            <div class="card-body">
+                                                                                <p><strong>Name:</strong>
+                                                                                    {{ $canceledorderdata->user->firstname }}
+                                                                                    {{ $canceledorderdata->user->lastname }}
+                                                                                </p>
+                                                                                <p><strong>Email:</strong>
+                                                                                    {{ $canceledorderdata->user->email }}
+                                                                                </p>
+                                                                                <p><strong>Phone:</strong>
+                                                                                    {{ $canceledorderdata->user->phone }}
+                                                                                </p>
+                                                                                <p><strong>Address:</strong>
+                                                                                    {{ $canceledorderdata->user->address }}
+                                                                                </p>
+                                                                                <p><strong>City:</strong>
+                                                                                    {{ $canceledorderdata->user->city }}
+                                                                                </p>
+                                                                                <p><strong>Country:</strong>
+                                                                                    {{ $canceledorderdata->user->country }}
+                                                                                </p>
+                                                                                <p><strong>Zip Code:</strong>
+                                                                                    {{ $canceledorderdata->user->zipcode }}
+                                                                                </p>
+
+                                                                                <!-- Add other details for the card here -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <!-- Right side with the rest of the columns -->
+                                                                    <div class="col-md-8">
+                                                                        <div class="card">
+                                                                            <div class="card-header">
+                                                                                <h5 class="card-title"><i
+                                                                                        class="fas fa-box"></i> Product
+                                                                                    Detail</h5>
+                                                                            </div>
+
+                                                                            <div class="card-body">
+                                                                                <!-- Product Details -->
+                                                                                <div class="product-details">
+                                                                                    <!-- Header -->
+                                                                                    <div class="product-header">
+                                                                                        <div
+                                                                                            class="product-property text-center">
+                                                                                            S.No</div>
+                                                                                        <div <div
+                                                                                            class="product-property text-center">
+                                                                                            Product</div>
+                                                                                        <div
+                                                                                            class="product-property text-center">
+                                                                                            Quantity</div>
+                                                                                        <div
+                                                                                            class="product-property text-center">
+                                                                                            Price
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="product-property text-center">
+                                                                                            Total
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- Product Item -->
+                                                                                    @foreach ($canceledorderdata->products as $product)
+                                                                                        <div class="product-item">
+                                                                                            <div
+                                                                                                class="product-value text-center">
+                                                                                                {{ $loop->iteration }}
+                                                                                            </div>
+                                                                                            <div <div
+                                                                                                class="product-value text-center">
+                                                                                                {{ $product->name }}</div>
+                                                                                            <div
+                                                                                                class="product-value text-center">
+                                                                                                {{ $product->quantity }}
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="product-value text-center">
+                                                                                                {{ $product->price }}</div>
+                                                                                            <div
+                                                                                                class="product-value text-center">
+                                                                                                {{ $product->total }}
+                                                                                            </div>
+                                                                                            <!-- Corrected total from 365 to 330 assuming a mistake -->
+                                                                                        </div>
+                                                                                    @endforeach
+                                                                                    <!-- Add more product items here -->
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <!-- Add additional details for the right side here -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
                                                             </div>
                                                         </div>
                                                     </div>
