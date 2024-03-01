@@ -220,6 +220,18 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
+                                <a href="{{ route('admin.user.show') }}"
+                                    class="nav-link {{ Route::is('admin.user.show') ? 'active' : '' }} ">
+                                    <p>View User</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.userreward.show') }}"
+                                    class="nav-link {{ Route::is('admin.userreward.show') ? 'active' : '' }} ">
+                                    <p>View User Reward</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{ route('admin.orders.pending') }}"
                                     class="nav-link {{ Route::is('admin.orders.pending') ? 'active' : '' }} ">
                                     <p>Pending Orders</p>

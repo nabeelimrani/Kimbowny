@@ -1270,5 +1270,60 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Flavor updated successfully.');
 
     }
+//user
+    public function showUser()
+    {
+        $user = User::orderBy('firstname', 'asc')->get();
+        return view('admin_side.userView')
+            ->with('user', $user);
+    }
+    public function showUserReward()
+    {
+        $user = User::where('reward_received', '1')->orderBy('firstname', 'asc')->get();
+        return view('admin_side.userRewardView', compact('user'));
+    }
+    public function delUser($id)
+    {
+        $user = User::find($id);
 
+        if (!$user) {
+
+            return redirect()->route('admin.user.show')
+                ->with('error', 'User not found');
+
+        }
+
+        $user->delete();
+
+        return redirect()->route('admin.user.show')->with('success', 'User deleted successfully');
+
+    }
+    public function delUserReward($id)
+    {
+        $user = User::find($id);
+
+        if (!$user) {
+
+            return redirect()->route('admin.user.show')
+                ->with('error', 'User not found');
+
+        }
+
+        $user->delete();
+
+        return redirect()->route('admin.userreward.show')->with('success', 'User deleted successfully');
+
+    }
+    public function rewardUpdateUser(Request $request)
+    {
+
+        $user = User::find($request->id);
+        if ($user) {
+            $user->reward_received = $request->reward;
+            $user->save();
+            return response()->json(['success' => 'User Reward updated successfully']);
+        }
+
+        return response()->json(['error' => 'User not found']);
+    }
 }

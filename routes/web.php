@@ -175,6 +175,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/pieces/show', [\App\Http\Controllers\AdminController::class, 'showPieces'])->name('pieces.show');
         Route::post('/pieces/del/{id}', [\App\Http\Controllers\AdminController::class, 'delPieces'])->name('pieces.del');
         Route::post('/pieces/edit/{id}', [\App\Http\Controllers\AdminController::class, 'editPieces'])->name('pieces.edit');
+
+        Route::get('/user/show', [\App\Http\Controllers\AdminController::class, 'showUser'])->name('user.show');
+        Route::post('/user/del/{id}', [\App\Http\Controllers\AdminController::class, 'delUser'])->name('user.del');
+        Route::get('/user/reward/update', [\App\Http\Controllers\AdminController::class, 'rewardUpdateUser'])->name('user.reward.update');
+        Route::get('/user/reward/show', [\App\Http\Controllers\AdminController::class, 'showUserReward'])->name('userreward.show');
+        Route::post('/user/reward/del/{id}', [\App\Http\Controllers\AdminController::class, 'delUserReward'])->name('userReward.del');
+
         // Add more authenticated admin routes here
     });
 });
